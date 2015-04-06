@@ -12,6 +12,7 @@ var Home = React.createClass({
     return (
       <div className="homePage">
         <Header />
+        <img className="tempCenterpiece" src="../pictures/logo.png"/>
       </div>
     );
   },

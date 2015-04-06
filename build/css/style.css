@@ -5,7 +5,7 @@
   font-weight: bold;
   height: 60px;
   left: 0;
-  min-width: 960px;
+  min-width: 800px;
   position: fixed;
   right: 0;
   top: 0; }
@@ -33,6 +33,12 @@
   height: 60px;
   width: 60px; }
 
+.tempCenterpiece {
+  width: 560px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
 * {
   margin: 0;
   padding: 0;
@@ -41,7 +47,7 @@
 body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 200;
-  background: #F5F5F5;
+  background: #FFFFFF;
   color: #fff; }
 
 button {

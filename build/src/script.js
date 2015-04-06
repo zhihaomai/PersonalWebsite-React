@@ -31979,7 +31979,7 @@ var Header = require("./header");
 var Home = React.createClass({ displayName: "Home",
 
   render: function () {
-    return React.createElement("div", { className: "homePage" }, React.createElement(Header, null));
+    return React.createElement("div", { className: "homePage" }, React.createElement(Header, null), React.createElement("img", { className: "tempCenterpiece", src: "../pictures/logo.png" }));
   } });
 
 module.exports = Home;
