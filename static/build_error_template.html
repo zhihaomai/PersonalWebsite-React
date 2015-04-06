@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Build Error</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #F5F5F5;
+        width: 100%;
+      }
+
+      .container {
+        position: absolute;
+        display: flex;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+
+      .card {
+        margin: auto;
+        text-align: left;
+        padding: 40px;
+        background: #EB6725;
+        color: #fff;
+        border-radius: 3px;
+        box-shadow: 2px 2px 5px -3px black;
+        line-height: 40px;
+      }
+    </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      {%= error %}
+    </div>
+  </div>
+</body>
+</html>

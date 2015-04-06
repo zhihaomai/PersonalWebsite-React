@@ -1,0 +1,41 @@
+@import "constants/colors";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 200;
+  background: $background;
+  color: #fff;
+}
+
+button {
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  padding: 10px;
+  background: $button;
+  border-radius: 3px;
+}
+
+button:hover {
+  background: $buttonHover;
+}
+
+h1 {
+  font-weight: 100;
+}
+
+a {
+  cursor: pointer;
+  color: $link;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $linkHover;
+}
