@@ -1,18 +1,37 @@
 .header {
-  display: flex;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 60px;
   background: white;
-  box-shadow: 0 0 5px -2px black; }
+  box-shadow: 0 0 5px -2px black;
+  display: inline-block;
+  font-weight: bold;
+  height: 60px;
+  left: 0;
+  min-width: 960px;
+  position: fixed;
+  right: 0;
+  top: 0; }
   .header ul {
     display: inherit; }
   .header ul li {
     display: inline-block;
+    margin: auto 0;
     padding: 0 20px;
-    margin: auto 0; }
+    vertical-align: top; }
+  .header .wordbutton {
+    line-height: 60px; }
+  .header .firstglyphbutton {
+    float: right;
+    line-height: 60px;
+    padding: 0 30px 0 6px; }
+  .header .glyphbutton {
+    float: right;
+    line-height: 60px;
+    padding: 0 6px; }
+  .header .glyphbutton:first-child {
+    padding-right: 20px; }
+
+.logo {
+  height: 60px;
+  width: 60px; }
 
 * {
   margin: 0;
@@ -41,11 +60,11 @@ h1 {
 
 a {
   cursor: pointer;
-  color: #FFA000;
+  color: #C62828;
   text-decoration: none; }
 
 a:hover {
-  color: #EB6725; }
+  color: #EF9A9A; }
 
 /*!
  *  Font Awesome 4.1.0 by @davegandy - http://fontawesome.io - @fontawesome
