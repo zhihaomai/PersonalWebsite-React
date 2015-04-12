@@ -5,6 +5,7 @@
   background: white;
   box-shadow: $faintShadow;
   display: inline-block;
+  font-family: 'Abel', sans-serif;
   font-weight: bold;
   height: $headerHeight;
   left: 0;
@@ -22,6 +23,11 @@
     margin: auto 0;
     padding: 0 20px;
     vertical-align: top;
+  }
+
+  .logo {
+    height: $headerHeight;
+    width: $headerHeight;
   }
 
   .wordbutton {
@@ -43,9 +49,12 @@
   .glyphbutton:first-child {
     padding-right: 20px;
   }
-}
 
-.logo {
-  height: $headerHeight;
-  width: $headerHeight;
+  .headerdesc {
+    border-left: 1px solid $red;
+    color: $red;
+    line-height: 40px;
+    margin: 10px 0px;
+
+  }
 }

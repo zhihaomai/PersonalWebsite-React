@@ -5,6 +5,7 @@
 
 var React = require('react');
 var Header = require('./header');
+var Footer = require('./footer');
 
 var Home = React.createClass({
 
@@ -12,7 +13,8 @@ var Home = React.createClass({
     return (
       <div className="homePage">
         <Header />
-        <img className="tempCenterpiece" src="../pictures/logo.png"/>
+        <div style={{height: 600}}></div>
+        <Footer />
       </div>
     );
   },

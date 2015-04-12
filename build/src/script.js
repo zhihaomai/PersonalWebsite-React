@@ -31936,36 +31936,44 @@ module.exports = require('./lib/React');
 },{"./lib/React":70}],198:[function(require,module,exports){
 "use strict";
 
-Parse.initialize("MndVjk5Yz5WFqkjNTsGszPhHA1c1iKU5LDJnNbFV", "dtN1IVjiQwpdBYW0DjKFBEtC4FBIrzrYOW5ccQxd");
+/* Footer
+ * ------
+ * This should be the view for the footer
+ */
 
-module.exports = Parse;
+var React = require("react");
+
+var Footer = React.createClass({ displayName: "Footer",
+  render: function () {
+    return React.createElement("div", { className: "footer" }, React.createElement("div", { className: "glyphbuttons" }, React.createElement("a", { href: "http://www.youtube.com/zhihaomai" }, React.createElement("i", { className: "fa fa-youtube-square" })), React.createElement("a", { href: "http://www.twitter.com/zhihaomai" }, React.createElement("i", { className: "fa fa-twitter-square" })), React.createElement("a", { href: "http://www.github.com/zhihaomai" }, React.createElement("i", { className: "fa fa-github-square" })), React.createElement("a", { href: "https://ca.linkedin.com/pub/zhihao-mai/54/603/a91" }, React.createElement("i", { className: "fa fa-linkedin-square" })), React.createElement("a", { href: "http://www.instagram.com/zhihaomai" }, React.createElement("i", { className: "fa fa-instagram" })), React.createElement("a", { href: "http://www.facebook.com/zhihaomai" }, React.createElement("i", { className: "fa fa-facebook-square" }))), React.createElement("div", { className: "text" }, "zhihao.z.mai@gmail.com"), React.createElement("div", { className: "text" }, "Copyright © 2015 Zhihao Mai. All Rights Reserved."));
+  } });
+
+module.exports = Footer;
 
 
-
-},{}],199:[function(require,module,exports){
+},{"react":197}],199:[function(require,module,exports){
 "use strict";
 
 /* Header
  * ---
- * This should be the view for our header
+ * This should be the view for the header
  */
 
 var React = require("react");
 var Router = require("react-router");
-var Parse = require("../utils/parse");
 
 var Link = Router.Link;
 
 var Header = React.createClass({ displayName: "Header",
   render: function () {
-    return React.createElement("div", { className: "header" }, React.createElement("ul", null, React.createElement("li", { className: "wordbutton" }, React.createElement(Link, { to: "home" }, React.createElement("img", { className: "logo", src: "../pictures/logo.png" }))), React.createElement("li", { className: "wordbutton" }, React.createElement(Link, { to: "home" }, "Blog")), React.createElement("li", { className: "wordbutton" }, React.createElement(Link, { to: "home" }, "Videos")), React.createElement("li", { className: "wordbutton" }, React.createElement(Link, { to: "home" }, "Photos")), React.createElement("li", { className: "wordbutton" }, React.createElement(Link, { to: "home" }, "Contact")), React.createElement("li", { className: "firstglyphbutton" }, React.createElement("a", { href: "http://www.youtube.com/zhihaomai" }, React.createElement("i", { className: "fa fa-youtube-square" }))), React.createElement("li", { className: "glyphbutton" }, React.createElement("a", { href: "http://www.twitter.com/zhihaomai" }, React.createElement("i", { className: "fa fa-twitter-square" }))), React.createElement("li", { className: "glyphbutton" }, React.createElement("a", { href: "http://www.github.com/zhihaomai" }, React.createElement("i", { className: "fa fa-github-square" }))), React.createElement("li", { className: "glyphbutton" }, React.createElement("a", { href: "https://ca.linkedin.com/pub/zhihao-mai/54/603/a91" }, React.createElement("i", { className: "fa fa-linkedin-square" }))), React.createElement("li", { className: "glyphbutton" }, React.createElement("a", { href: "http://www.instagram.com/zhihaomai" }, React.createElement("i", { className: "fa fa-instagram" }))), React.createElement("li", { className: "glyphbutton" }, React.createElement("a", { href: "http://www.facebook.com/zhihaomai" }, React.createElement("i", { className: "fa fa-facebook-square" })))));
+    return React.createElement("div", { className: "header" }, React.createElement("ul", { style: { float: "left", height: 60 } }, React.createElement("li", { className: "wordbutton" }, React.createElement(Link, { to: "home" }, React.createElement("img", { className: "logo", src: "../pictures/logo.png" }))), React.createElement("li", { className: "headerdesc" }, "FOLLOW YOUR OWN PATH")), React.createElement("ul", { style: { float: "right" } }, React.createElement("li", { className: "wordbutton" }, React.createElement(Link, { to: "home" }, "BLOG")), React.createElement("li", { className: "wordbutton" }, React.createElement(Link, { to: "home" }, "FILM")), React.createElement("li", { className: "wordbutton" }, React.createElement(Link, { to: "home" }, "PHOTOS")), React.createElement("li", { className: "wordbutton" }, React.createElement(Link, { to: "home" }, "CONTACT"))));
   } });
 
 module.exports = Header;
 
 
 
-},{"../utils/parse":198,"react":197,"react-router":28}],200:[function(require,module,exports){
+},{"react":197,"react-router":28}],200:[function(require,module,exports){
 "use strict";
 
 /* Home
@@ -31975,15 +31983,16 @@ module.exports = Header;
 
 var React = require("react");
 var Header = require("./header");
+var Footer = require("./footer");
 
 var Home = React.createClass({ displayName: "Home",
 
   render: function () {
-    return React.createElement("div", { className: "homePage" }, React.createElement(Header, null), React.createElement("img", { className: "tempCenterpiece", src: "../pictures/logo.png" }));
+    return React.createElement("div", { className: "homePage" }, React.createElement(Header, null), React.createElement("div", { style: { height: 600 } }), React.createElement(Footer, null));
   } });
 
 module.exports = Home;
 
 
 
-},{"./header":199,"react":197}]},{},[1]);
+},{"./footer":198,"./header":199,"react":197}]},{},[1]);

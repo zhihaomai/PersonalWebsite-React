@@ -1,11 +1,25 @@
+.footer {
+  background: white;
+  color: #C62828;
+  display: inline-block;
+  padding: 10px;
+  text-align: center;
+  width: 100%; }
+  .footer a {
+    margin: 10px; }
+  .footer .text {
+    margin: 10px;
+    font-size: 12px; }
+
 .header {
   background: white;
   box-shadow: 0 0 5px -2px black;
   display: inline-block;
+  font-family: 'Abel', sans-serif;
   font-weight: bold;
   height: 60px;
   left: 0;
-  min-width: 800px;
+  min-width: 700px;
   position: fixed;
   right: 0;
   top: 0; }
@@ -16,6 +30,9 @@
     margin: auto 0;
     padding: 0 20px;
     vertical-align: top; }
+  .header .logo {
+    height: 60px;
+    width: 60px; }
   .header .wordbutton {
     line-height: 60px; }
   .header .firstglyphbutton {
@@ -28,16 +45,12 @@
     padding: 0 6px; }
   .header .glyphbutton:first-child {
     padding-right: 20px; }
+  .header .headerdesc {
+    border-left: 1px solid #C62828;
+    color: #C62828;
+    line-height: 40px;
+    margin: 10px 0px; }
 
-.logo {
-  height: 60px;
-  width: 60px; }
-
-.tempCenterpiece {
-  width: 560px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto; }
 
 * {
   margin: 0;
@@ -47,19 +60,8 @@
 body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 200;
-  background: #FFFFFF;
+  background: #EEEEEE;
   color: #fff; }
-
-button {
-  color: #fff;
-  cursor: pointer;
-  border: none;
-  padding: 10px;
-  background: #FFA000;
-  border-radius: 3px; }
-
-button:hover {
-  background: #EB6725; }
 
 h1 {
   font-weight: 100; }
