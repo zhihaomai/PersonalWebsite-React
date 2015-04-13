@@ -74,6 +74,9 @@ a {
 a:hover {
   color: #EF9A9A; }
 
+.content {
+  margin-top: 60px; }
+
 /*!
  *  Font Awesome 4.1.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)

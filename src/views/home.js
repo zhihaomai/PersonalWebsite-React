@@ -4,6 +4,7 @@
  */
 
 var React = require('react');
+
 var Header = require('./header');
 var Footer = require('./footer');
 
@@ -13,8 +14,10 @@ var Home = React.createClass({
     return (
       <div className="homePage">
         <Header />
-        <div style={{height: 600}}></div>
-        <Footer />
+        <div className="content">
+        	<div style={{height: 600}}></div>
+        	<Footer />
+        </div>
       </div>
     );
   },

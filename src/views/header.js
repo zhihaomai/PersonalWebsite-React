@@ -19,18 +19,15 @@ var Header = React.createClass({
             </Link>
           </li>
           <li className="headerdesc">
-            FOLLOW YOUR OWN PATH
+            CREATE OUR OWN PATH
           </li>
         </ul>
         <ul style={{float: "right"}}>
           <li className="wordbutton">
-            <Link to="home">BLOG</Link>
-          </li>
-          <li className="wordbutton">
             <Link to="home">FILM</Link>
           </li>
           <li className="wordbutton">
-            <Link to="home">PHOTOS</Link>
+            <Link to="home">RESUME</Link>
           </li>
           <li className="wordbutton">
             <Link to="home">CONTACT</Link>
