@@ -31966,7 +31966,7 @@ var Link = Router.Link;
 
 var Header = React.createClass({ displayName: "Header",
   render: function () {
-    return React.createElement("div", { className: "header" }, React.createElement("ul", { style: { float: "left", height: 60 } }, React.createElement("li", { className: "wordbutton" }, React.createElement(Link, { to: "home" }, React.createElement("img", { className: "logo", src: "../pictures/logo.png" }))), React.createElement("li", { className: "headerdesc" }, "CREATE YOUR OWN PATH")), React.createElement("ul", { style: { float: "right" } }, React.createElement("li", { className: "wordbutton" }, React.createElement(Link, { to: "home" }, "FILM")), React.createElement("li", { className: "wordbutton" }, React.createElement(Link, { to: "home" }, "RESUME")), React.createElement("li", { className: "wordbutton" }, React.createElement(Link, { to: "home" }, "CONTACT"))));
+    return React.createElement("div", { className: "header" }, React.createElement("ul", { style: { float: "left", height: 60 } }, React.createElement("li", { className: "wordbutton" }, React.createElement(Link, { to: "home" }, React.createElement("img", { className: "logo", src: "../pictures/logo.png" }))), React.createElement("li", { className: "headerdesc" }, "CREATE OUR OWN PATH")), React.createElement("ul", { style: { float: "right" } }, React.createElement("li", { className: "wordbutton" }, React.createElement(Link, { to: "home" }, "FILM")), React.createElement("li", { className: "wordbutton" }, React.createElement(Link, { to: "home" }, "RESUME")), React.createElement("li", { className: "wordbutton" }, React.createElement(Link, { to: "home" }, "CONTACT"))));
   } });
 
 module.exports = Header;
@@ -31988,8 +31988,12 @@ var Footer = require("./footer");
 
 var Home = React.createClass({ displayName: "Home",
 
+  _onClick: function () {
+    console.log("HEY");
+  },
+
   render: function () {
-    return React.createElement("div", { className: "homePage" }, React.createElement(Header, null), React.createElement("div", { className: "content" }, React.createElement("div", { style: { height: 600 } }), React.createElement(Footer, null)));
+    return React.createElement("div", { className: "homePage" }, React.createElement(Header, null), React.createElement("div", { className: "content" }, React.createElement("video", { className: "video", width: "100%", onClick: this._onClick, autoplay: "autoplay" }, React.createElement("source", { src: "https://fbcdn-video-p-a.akamaihd.net/hvideo-ak-xpf1/v/t43.1792-2/10474718_1576963292570527_792381358_n.mp4?efg=eyJxZSI6ImZiY2RuX3ZpZGVvX3JhdGVsaW1pdF9yb2xsb3V0Mix2X3JvbGxvdXQiLCJ2ZW5jb2RlX3RhZyI6ImxlZ2FjeV9oZCJ9&oh=946d9ecdea8cd0f7bf05e29341090cd3&oe=552B7367&__gda__=1428909664_895d8166d9d461724f8ad5b963097b1f", type: "video/mp4" })), React.createElement(Footer, null)));
   } });
 
 module.exports = Home;
