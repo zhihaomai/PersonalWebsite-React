@@ -22,7 +22,8 @@
   min-width: 700px;
   position: fixed;
   right: 0;
-  top: 0; }
+  top: 0;
+  z-index: 1; }
   .header ul {
     display: inherit; }
   .header ul li {
@@ -81,7 +82,8 @@ a:hover {
   color: #EF9A9A; }
 
 .content {
-  margin-top: 60px; }
+  margin-top: 60px;
+  text-align: center; }
 
 /*!
  *  Font Awesome 4.1.0 by @davegandy - http://fontawesome.io - @fontawesome
