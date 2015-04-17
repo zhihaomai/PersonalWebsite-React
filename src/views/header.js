@@ -24,13 +24,13 @@ var Header = React.createClass({
         </ul>
         <ul style={{float: "right"}}>
           <li className="wordbutton">
-            <Link to="home">FILM</Link>
-          </li>
+            <Link to="home">HOME</Link>
+          </li>        
           <li className="wordbutton">
             <a href="resume.pdf">RESUME</a>
           </li>
           <li className="wordbutton">
-            <Link to="home">CONTACT</Link>
+            <Link to="team">TEAM</Link>
           </li>
         </ul>
       </div>

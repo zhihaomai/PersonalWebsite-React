@@ -52,12 +52,9 @@
     line-height: 40px;
     margin: 10px 0px; }
 
-.homePage .video {
-  display: block;
-  margin: 0 auto;
-  max-width: 960px;
-  padding: 20px;
-  width: 100%; }
+.homePage .fb-video {
+  margin: 20px 0px;
+  max-width: 900px; }
 
 * {
   margin: 0;
@@ -84,6 +81,42 @@ a:hover {
 .content {
   margin-top: 60px;
   text-align: center; }
+
+.teamPage {
+  color: #C62828; }
+  .teamPage .teamGrid {
+    background: #FAFAFA;
+    padding: 20px; }
+  .teamPage .memberContainer {
+    background: white;
+    border-radius: 5px;
+    border: 1px #E0E0E0 solid;
+    min-height: 120px;
+    margin: 40px 10px 10px 10px; }
+  .teamPage .memberPic {
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 0px 5px 5px gray;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -30px;
+    width: 50%; }
+  .teamPage .memberName {
+    color: #C62828;
+    font-size: 20px;
+    font-family: 'Abel', sans-serif;
+    font-weight: bold;
+    padding: 10px 0px 5px 0px; }
+  .teamPage .memberRole {
+    border-bottom: 1px solid #E0E0E0;
+    color: gray;
+    font-size: 14px;
+    padding: 0px 0px 10px 0px;
+    width: 100%; }
+  .teamPage .memberDesc {
+    color: black;
+    padding: 10px;
+    font-size: 12px; }
 
 /*!
  *  Font Awesome 4.1.0 by @davegandy - http://fontawesome.io - @fontawesome

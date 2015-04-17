@@ -8,6 +8,7 @@ var $ = require("jquery");
 
 // Internal dependencies
 var Home = require("./views/home.js");
+var Team = require("./views/team.js");
 
 var DefaultRoute = Router.DefaultRoute;
 var Link = Router.Link;
@@ -19,7 +20,7 @@ var App = React.createClass({ displayName: "App",
     return React.createElement(RouteHandler, null);
   } });
 
-var routes = React.createElement(Route, { name: "app", path: "/", handler: App }, React.createElement(DefaultRoute, { name: "home", handler: Home }));
+var routes = React.createElement(Route, { name: "app", path: "/", handler: App }, React.createElement(DefaultRoute, { name: "home", handler: Home }), React.createElement(Route, { name: "team", path: "/team", handler: Team }));
 
 $(function () {
   Router.run(routes, function (Handler) {
@@ -29,7 +30,7 @@ $(function () {
 
 
 
-},{"./views/home.js":200,"jquery":3,"react":197,"react-router":28}],2:[function(require,module,exports){
+},{"./views/home.js":201,"./views/team.js":202,"jquery":3,"react":197,"react-router":28}],2:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -31936,6 +31937,32 @@ module.exports = require('./lib/React');
 },{"./lib/React":70}],198:[function(require,module,exports){
 "use strict";
 
+/* Team Member Grid Item
+ * ---------------------
+ */
+
+var React = require("react");
+
+var Header = require("./header");
+var Footer = require("./footer");
+
+var TeamMember = React.createClass({ displayName: "TeamMember",
+  propTypes: {
+    name: React.PropTypes.string.isRequired,
+    src: React.PropTypes.string.isRequired,
+    role: React.PropTypes.string.isRequired,
+    desc: React.PropTypes.string.isRequired },
+
+  render: function () {
+    return React.createElement("div", { className: "pure-u-1 pure-u-md-1-2 pure-u-lg-1-4" }, React.createElement("div", { className: "memberContainer" }, React.createElement("img", { className: "memberPic", src: this.props.src }), React.createElement("div", { className: "memberName" }, this.props.name), React.createElement("div", { className: "memberRole" }, this.props.role), React.createElement("div", { className: "memberDesc" }, this.props.desc)));
+  } });
+
+module.exports = TeamMember;
+
+
+},{"./footer":199,"./header":200,"react":197}],199:[function(require,module,exports){
+"use strict";
+
 /* Footer
  * ------
  * This should be the view for the footer
@@ -31951,7 +31978,7 @@ var Footer = React.createClass({ displayName: "Footer",
 module.exports = Footer;
 
 
-},{"react":197}],199:[function(require,module,exports){
+},{"react":197}],200:[function(require,module,exports){
 "use strict";
 
 /* Header
@@ -31966,18 +31993,18 @@ var Link = Router.Link;
 
 var Header = React.createClass({ displayName: "Header",
   render: function () {
-    return React.createElement("div", { className: "header" }, React.createElement("ul", { style: { float: "left", height: 60 } }, React.createElement("li", { className: "wordbutton" }, React.createElement(Link, { to: "home" }, React.createElement("img", { className: "logo", src: "../pictures/logo.png" }))), React.createElement("li", { className: "headerdesc" }, "CREATE OUR OWN PATH")), React.createElement("ul", { style: { float: "right" } }, React.createElement("li", { className: "wordbutton" }, React.createElement(Link, { to: "home" }, "FILM")), React.createElement("li", { className: "wordbutton" }, React.createElement("a", { href: "resume.pdf" }, "RESUME")), React.createElement("li", { className: "wordbutton" }, React.createElement(Link, { to: "home" }, "CONTACT"))));
+    return React.createElement("div", { className: "header" }, React.createElement("ul", { style: { float: "left", height: 60 } }, React.createElement("li", { className: "wordbutton" }, React.createElement(Link, { to: "home" }, React.createElement("img", { className: "logo", src: "../pictures/logo.png" }))), React.createElement("li", { className: "headerdesc" }, "CREATE OUR OWN PATH")), React.createElement("ul", { style: { float: "right" } }, React.createElement("li", { className: "wordbutton" }, React.createElement(Link, { to: "home" }, "HOME")), React.createElement("li", { className: "wordbutton" }, React.createElement("a", { href: "resume.pdf" }, "RESUME")), React.createElement("li", { className: "wordbutton" }, React.createElement(Link, { to: "team" }, "TEAM"))));
   } });
 
 module.exports = Header;
 
 
 
-},{"react":197,"react-router":28}],200:[function(require,module,exports){
+},{"react":197,"react-router":28}],201:[function(require,module,exports){
 "use strict";
 
-/* Home
- * ---
+/* Home Page
+ * ---------
  * Initial page of website
  */
 
@@ -31988,7 +32015,7 @@ var Footer = require("./footer");
 
 var Home = React.createClass({ displayName: "Home",
 
-  componentWillMount: function () {
+  componentDidMount: function () {
     (function (d, s, id) {
       var js,
           fjs = d.getElementsByTagName(s)[0];
@@ -32005,7 +32032,6 @@ var Home = React.createClass({ displayName: "Home",
 
   render: function () {
     return React.createElement("div", { className: "homePage" }, React.createElement(Header, null), React.createElement("div", { className: "content" }, React.createElement("div", {
-      style: { maxWidth: 1000, marginTop: 20, marginBottom: 20 },
       className: "fb-video",
       "data-allowfullscreen": "true",
       "data-href": "https://www.facebook.com/zhifilms/videos/1576962825903907/" }, React.createElement("div", { className: "fb-xfbml-parse-ignore" })), React.createElement(Footer, null)));
@@ -32015,4 +32041,74 @@ module.exports = Home;
 
 
 
-},{"./footer":198,"./header":199,"react":197}]},{},[1]);
+},{"./footer":199,"./header":200,"react":197}],202:[function(require,module,exports){
+"use strict";
+
+/* Team Page
+ * ---------
+ */
+
+var React = require("react");
+
+var Header = require("./header");
+var TeamMember = require("./TeamMember");
+var Footer = require("./footer");
+
+var Team = React.createClass({ displayName: "Team",
+
+  render: function () {
+    return React.createElement("div", { className: "teamPage" }, React.createElement(Header, null), React.createElement("div", { className: "content" }, React.createElement("div", { className: "pure-g teamGrid" }, React.createElement(TeamMember, {
+      name: "Mai",
+      src: "../team/mai_dp.jpg",
+      role: "President and Founder",
+      desc: "Contrary to popular belief," + " " + "Lorem Ipsum is not simply random text." + " " + "It has roots in a piece of classical Latin" + " " + "literature from 45 BC, making it over" + " " + "2000 years old." }), React.createElement(TeamMember, {
+      name: "Lam",
+      src: "../team/gina_dp.jpg",
+      role: "Chief Operations Officer",
+      desc: "Contrary to popular belief," + " " + "Lorem Ipsum is not simply random text." + " " + "It has roots in a piece of classical Latin" + " " + "literature from 45 BC, making it over" + " " + "2000 years old." }), React.createElement(TeamMember, {
+      name: "Bedi",
+      src: "../team/bedi_dp.jpg",
+      role: "Chief Technical Officer",
+      desc: "Contrary to popular belief," + " " + "Lorem Ipsum is not simply random text." + " " + "It has roots in a piece of classical Latin" + " " + "literature from 45 BC, making it over" + " " + "2000 years old." }), React.createElement(TeamMember, {
+      name: "Chiu",
+      src: "../team/chiu_dp.jpg",
+      role: "Chief Financial Officer",
+      desc: "Contrary to popular belief," + " " + "Lorem Ipsum is not simply random text." + " " + "It has roots in a piece of classical Latin" + " " + "literature from 45 BC, making it over" + " " + "2000 years old." }), React.createElement(TeamMember, {
+      name: "Liao",
+      src: "../team/liao_dp.jpg",
+      role: "VP, Marketing & Global Operations",
+      desc: "Contrary to popular belief," + " " + "Lorem Ipsum is not simply random text." + " " + "It has roots in a piece of classical Latin" + " " + "literature from 45 BC, making it over" + " " + "2000 years old." }), React.createElement(TeamMember, {
+      name: "Pham",
+      src: "../team/pham_dp.jpg",
+      role: "VP, Director of Engineering",
+      desc: "Contrary to popular belief," + " " + "Lorem Ipsum is not simply random text." + " " + "It has roots in a piece of classical Latin" + " " + "literature from 45 BC, making it over" + " " + "2000 years old." }), React.createElement(TeamMember, {
+      name: "Tam",
+      src: "../team/tam_dp.jpg",
+      role: "VP, Director of Design",
+      desc: "Contrary to popular belief," + " " + "Lorem Ipsum is not simply random text." + " " + "It has roots in a piece of classical Latin" + " " + "literature from 45 BC, making it over" + " " + "2000 years old." }), React.createElement(TeamMember, {
+      name: "Chan",
+      src: "../team/chan_dp.jpg",
+      role: "VP, Quality Assurance",
+      desc: "Contrary to popular belief," + " " + "Lorem Ipsum is not simply random text." + " " + "It has roots in a piece of classical Latin" + " " + "literature from 45 BC, making it over" + " " + "2000 years old." }), React.createElement(TeamMember, {
+      name: "Grewal",
+      src: "../team/grewal_dp.jpg",
+      role: "VP, Finance & Accounting",
+      desc: "Contrary to popular belief," + " " + "Lorem Ipsum is not simply random text." + " " + "It has roots in a piece of classical Latin" + " " + "literature from 45 BC, making it over" + " " + "2000 years old." }), React.createElement(TeamMember, {
+      name: "Ng",
+      src: "../team/ng_dp.jpg",
+      role: "VP, Business Development",
+      desc: "Contrary to popular belief," + " " + "Lorem Ipsum is not simply random text." + " " + "It has roots in a piece of classical Latin" + " " + "literature from 45 BC, making it over" + " " + "2000 years old." }), React.createElement(TeamMember, {
+      name: "Siu",
+      src: "../team/siu_dp.jpg",
+      role: "VP, Growth & Advertising",
+      desc: "Contrary to popular belief," + " " + "Lorem Ipsum is not simply random text." + " " + "It has roots in a piece of classical Latin" + " " + "literature from 45 BC, making it over" + " " + "2000 years old." }), React.createElement(TeamMember, {
+      name: "Lo",
+      src: "../team/lo_dp.jpg",
+      role: "Director of Human Resources",
+      desc: "Contrary to popular belief," + " " + "Lorem Ipsum is not simply random text." + " " + "It has roots in a piece of classical Latin" + " " + "literature from 45 BC, making it over" + " " + "2000 years old." })), React.createElement(Footer, null)));
+  } });
+
+module.exports = Team;
+
+
+},{"./TeamMember":198,"./footer":199,"./header":200,"react":197}]},{},[1]);

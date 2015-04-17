@@ -1,5 +1,5 @@
-/* Home
- * ---
+/* Home Page
+ * ---------
  * Initial page of website
  */
 
@@ -10,7 +10,7 @@ var Footer = require('./footer');
 
 var Home = React.createClass({
 
-  componentWillMount: function() {
+  componentDidMount: function() {
     (function(d, s, id) {  
       var js, fjs = d.getElementsByTagName(s)[0];  
       if (d.getElementById(id)) return;  
@@ -29,8 +29,7 @@ var Home = React.createClass({
       <div className="homePage">
         <Header />
         <div className="content">
-          <div 
-            style={{maxWidth: 1000, marginTop: 20, marginBottom: 20}} 
+          <div  
             className="fb-video" 
             data-allowfullscreen="true" 
             data-href="https://www.facebook.com/zhifilms/videos/1576962825903907/">
