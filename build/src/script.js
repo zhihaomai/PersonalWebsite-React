@@ -31966,7 +31966,7 @@ var Link = Router.Link;
 
 var Header = React.createClass({ displayName: "Header",
   render: function () {
-    return React.createElement("div", { className: "header" }, React.createElement("ul", { style: { float: "left", height: 60 } }, React.createElement("li", { className: "wordbutton" }, React.createElement(Link, { to: "home" }, React.createElement("img", { className: "logo", src: "../pictures/logo.png" }))), React.createElement("li", { className: "headerdesc" }, "CREATE OUR OWN PATH")), React.createElement("ul", { style: { float: "right" } }, React.createElement("li", { className: "wordbutton" }, React.createElement(Link, { to: "home" }, "FILM")), React.createElement("li", { className: "wordbutton" }, React.createElement(Link, { to: "home" }, "RESUME")), React.createElement("li", { className: "wordbutton" }, React.createElement(Link, { to: "home" }, "CONTACT"))));
+    return React.createElement("div", { className: "header" }, React.createElement("ul", { style: { float: "left", height: 60 } }, React.createElement("li", { className: "wordbutton" }, React.createElement(Link, { to: "home" }, React.createElement("img", { className: "logo", src: "../pictures/logo.png" }))), React.createElement("li", { className: "headerdesc" }, "CREATE OUR OWN PATH")), React.createElement("ul", { style: { float: "right" } }, React.createElement("li", { className: "wordbutton" }, React.createElement(Link, { to: "home" }, "FILM")), React.createElement("li", { className: "wordbutton" }, React.createElement("a", { href: "resume.pdf" }, "RESUME")), React.createElement("li", { className: "wordbutton" }, React.createElement(Link, { to: "home" }, "CONTACT"))));
   } });
 
 module.exports = Header;

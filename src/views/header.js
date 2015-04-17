@@ -27,7 +27,7 @@ var Header = React.createClass({
             <Link to="home">FILM</Link>
           </li>
           <li className="wordbutton">
-            <Link to="home">RESUME</Link>
+            <a href="resume.pdf">RESUME</a>
           </li>
           <li className="wordbutton">
             <Link to="home">CONTACT</Link>
