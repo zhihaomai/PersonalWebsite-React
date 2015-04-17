@@ -32061,51 +32061,51 @@ var Team = React.createClass({ displayName: "Team",
       name: "Mai",
       src: "../team/mai_dp.jpg",
       role: "President and Founder",
-      desc: "Contrary to popular belief," + " " + "Lorem Ipsum is not simply random text." + " " + "It has roots in a piece of classical Latin" + " " + "literature from 45 BC, making it over" + " " + "2000 years old." }), React.createElement(TeamMember, {
+      desc: "Known by many as 'shotcalla' aka" + " " + "'diamondkilla' aka 'playmaka', Mai has" + " " + "thrived in whatever role necessary." }), React.createElement(TeamMember, {
       name: "Lam",
       src: "../team/gina_dp.jpg",
       role: "Chief Operations Officer",
-      desc: "Contrary to popular belief," + " " + "Lorem Ipsum is not simply random text." + " " + "It has roots in a piece of classical Latin" + " " + "literature from 45 BC, making it over" + " " + "2000 years old." }), React.createElement(TeamMember, {
+      desc: "Named Top 100 Most Influential People" + " " + "on Earth, Lam has broken records and barriers" + " " + "on her way to the top." }), React.createElement(TeamMember, {
       name: "Bedi",
       src: "../team/bedi_dp.jpg",
       role: "Chief Technical Officer",
-      desc: "Contrary to popular belief," + " " + "Lorem Ipsum is not simply random text." + " " + "It has roots in a piece of classical Latin" + " " + "literature from 45 BC, making it over" + " " + "2000 years old." }), React.createElement(TeamMember, {
+      desc: "The founder of OmniJS, Mintr, Trade App," + " " + "and Playtube, Bedi is an absolute" + " " + "legend in the tech world." }), React.createElement(TeamMember, {
       name: "Chiu",
       src: "../team/chiu_dp.jpg",
       role: "Chief Financial Officer",
-      desc: "Contrary to popular belief," + " " + "Lorem Ipsum is not simply random text." + " " + "It has roots in a piece of classical Latin" + " " + "literature from 45 BC, making it over" + " " + "2000 years old." }), React.createElement(TeamMember, {
+      desc: "Started as an RPG game developer, Chiu" + " " + "went into finance after selling his own RPG" + " " + "for 14 million dollars." }), React.createElement(TeamMember, {
       name: "Liao",
       src: "../team/liao_dp.jpg",
       role: "VP, Marketing & Global Operations",
-      desc: "Contrary to popular belief," + " " + "Lorem Ipsum is not simply random text." + " " + "It has roots in a piece of classical Latin" + " " + "literature from 45 BC, making it over" + " " + "2000 years old." }), React.createElement(TeamMember, {
+      desc: "Sold his lemonade business for 4 million dollars" + " " + "at the age of 10, Liao was bred for this opportunity in marketing." }), React.createElement(TeamMember, {
       name: "Pham",
       src: "../team/pham_dp.jpg",
       role: "VP, Director of Engineering",
-      desc: "Contrary to popular belief," + " " + "Lorem Ipsum is not simply random text." + " " + "It has roots in a piece of classical Latin" + " " + "literature from 45 BC, making it over" + " " + "2000 years old." }), React.createElement(TeamMember, {
+      desc: "MMA fighter who ended his career early" + " " + "due to a lack of competition in the sport, Pham has now found" + " " + "a worthy challenge as the director of engineering." }), React.createElement(TeamMember, {
       name: "Tam",
       src: "../team/tam_dp.jpg",
       role: "VP, Director of Design",
-      desc: "Contrary to popular belief," + " " + "Lorem Ipsum is not simply random text." + " " + "It has roots in a piece of classical Latin" + " " + "literature from 45 BC, making it over" + " " + "2000 years old." }), React.createElement(TeamMember, {
+      desc: "Known for his exotic tastes, Tam also" + " " + "shadows as the company representative" + " " + "at the Pokemon World Championships every year." }), React.createElement(TeamMember, {
       name: "Chan",
       src: "../team/chan_dp.jpg",
       role: "VP, Quality Assurance",
-      desc: "Contrary to popular belief," + " " + "Lorem Ipsum is not simply random text." + " " + "It has roots in a piece of classical Latin" + " " + "literature from 45 BC, making it over" + " " + "2000 years old." }), React.createElement(TeamMember, {
+      desc: "Guiness World Record holder for worst arachnophobia," + " " + "Chan ensures products and services are delivered moist and well." }), React.createElement(TeamMember, {
       name: "Grewal",
       src: "../team/grewal_dp.jpg",
       role: "VP, Finance & Accounting",
-      desc: "Contrary to popular belief," + " " + "Lorem Ipsum is not simply random text." + " " + "It has roots in a piece of classical Latin" + " " + "literature from 45 BC, making it over" + " " + "2000 years old." }), React.createElement(TeamMember, {
+      desc: "Co-founder of the Garden Guru, Grewal cuts" + " " + "budgets and expenses as well as he did bushes and scrubs." }), React.createElement(TeamMember, {
       name: "Ng",
       src: "../team/ng_dp.jpg",
       role: "VP, Business Development",
-      desc: "Contrary to popular belief," + " " + "Lorem Ipsum is not simply random text." + " " + "It has roots in a piece of classical Latin" + " " + "literature from 45 BC, making it over" + " " + "2000 years old." }), React.createElement(TeamMember, {
+      desc: "After three ups and downs, Ng has blossomed" + " " + "into a business mogul, thirtsy for the blood of competitors." }), React.createElement(TeamMember, {
       name: "Siu",
       src: "../team/siu_dp.jpg",
       role: "VP, Growth & Advertising",
-      desc: "Contrary to popular belief," + " " + "Lorem Ipsum is not simply random text." + " " + "It has roots in a piece of classical Latin" + " " + "literature from 45 BC, making it over" + " " + "2000 years old." }), React.createElement(TeamMember, {
+      desc: "Spent 3 years in the Jungle of Summoner's Rift," + " " + "Siu has emerged as a top talent in terms of company growth" }), React.createElement(TeamMember, {
       name: "Lo",
       src: "../team/lo_dp.jpg",
       role: "Director of Human Resources",
-      desc: "Contrary to popular belief," + " " + "Lorem Ipsum is not simply random text." + " " + "It has roots in a piece of classical Latin" + " " + "literature from 45 BC, making it over" + " " + "2000 years old." })), React.createElement(Footer, null)));
+      desc: "Never one to shy away from conflict, Lo has been" + " " + "known to use unorthodox methods to solve problems in the worldplace." })), React.createElement(Footer, null)));
   } });
 
 module.exports = Team;
