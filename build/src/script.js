@@ -32046,11 +32046,39 @@ var Footer = require("./footer");
 var Home = React.createClass({ displayName: "Home",
 
   _renderBanner: function () {
-    return React.createElement("div", { className: "pure-g" }, React.createElement("div", { className: "pure-u-1 pure-u-md-1-1 bannerContainer" }, React.createElement("img", { className: "banner", src: "../pictures/temp_banner.jpg" }), React.createElement("div", { className: "bannerText" }, React.createElement("div", { style: { display: "block" }, className: "fa fa-play-circle" }), React.createElement("div", null, "ZHI FILMS"), React.createElement("div", { className: "bannerDesc" }, "Internship Vlogs, GoPro Adventures, and Life Moments"), React.createElement("button", { className: "pure-button bannerButton" }, "Take A Glimpse"))), React.createElement("div", { style: { height: 800 }, className: "pure-u-1 pure-u-md-1-1" }));
+    return React.createElement("div", { className: "pure-g" }, React.createElement("div", { className: "pure-u-1 pure-u-md-1-1 bannerContainer" }, React.createElement("img", { className: "banner", src: "../pictures/temp_banner.jpg" }), React.createElement("div", { className: "bannerText" }, React.createElement("div", { style: { display: "block" }, className: "fa fa-play-circle" }), React.createElement("div", null, "ZHI FILMS"), React.createElement("div", { className: "bannerDesc" }, "Internship Vlogs, GoPro Adventures, Life Moments"), React.createElement("a", {
+      className: "pure-button bannerButton",
+      href: "http://www.facebook.com/zhifilms" }, "View Now"))));
+  },
+
+  componentWillMount: function () {
+    !(function (d, s, id) {
+      var js,
+          fjs = d.getElementsByTagName(s)[0];
+      var p = /^http:/.test(d.location) ? "http" : "https";
+      if (d.getElementById(id)) return;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = p + "://platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    })(document, "script", "twitter-wjs");
+  },
+
+  componentWillUnmount: function () {
+    !(function (d, s, id) {
+      var js = d.getElementById(id);
+      if (js.parentNode) {
+        js.parentNode.removeChild(js);
+      }
+    })(document, "script", "twitter-wjs");
+  },
+
+  _renderNews: function () {
+    return React.createElement("div", { className: "pure-g" }, React.createElement("div", { className: "pure-u-1 pure-u-md-2-3 container" }, React.createElement("div", { className: "contentContainer" })), React.createElement("div", { className: "pure-u-1 pure-u-md-1-3 container" }, React.createElement("a", { className: "twitter-timeline", "data-widget-id": "589509406125006848" })));
   },
 
   render: function () {
-    return React.createElement("div", { className: "homePage" }, React.createElement(Header, null), React.createElement("div", { className: "content" }, this._renderBanner(), React.createElement(Footer, null)));
+    return React.createElement("div", { className: "homePage" }, React.createElement(Header, null), React.createElement("div", { className: "content" }, this._renderBanner(), this._renderNews(), React.createElement(Footer, null)));
   } });
 
 module.exports = Home;

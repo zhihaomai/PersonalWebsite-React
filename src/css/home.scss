@@ -37,6 +37,18 @@
 		background: $red;
 		color: white;
 		font-size: 2vmax;
-		margin-top: 2vw;
+		margin-top: 1vw;
+	}
+
+	.container {
+		padding: 10px;
+		background: $lightGray;
+	}
+
+	.contentContainer {
+		background: white;
+		border: 1px $darkGray solid;
+		border-radius: 4px;
+		height: 300px;
 	}
 }
