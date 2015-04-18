@@ -31992,8 +31992,38 @@ var Router = require("react-router");
 var Link = Router.Link;
 
 var Header = React.createClass({ displayName: "Header",
+
+  componentWillMount: function () {
+    var WINDOW_CHANGE_EVENT = "onorientationchange" in window ? "orientationchange" : "resize";
+    window.addEventListener(WINDOW_CHANGE_EVENT, this._closeMenu);
+  },
+
+  _closeMenu: function () {
+    var menu = document.getElementById("menu");
+    if (menu.classList.contains("open")) {
+      toggleMenu();
+    }
+  },
+
+  _toggleHorizontal: function () {
+    [].forEach.call(document.getElementById("menu").querySelectorAll(".custom-can-transform"), function (el) {
+      el.classList.toggle("pure-menu-horizontal");
+    });
+  },
+
+  _toggleMenu: function () {
+    var menu = document.getElementById("menu");
+    if (menu.classList.contains("open")) {
+      setTimeout(this._toggleHorizontal, 500);
+    } else {
+      this._toggleHorizontal();
+    }
+    menu.classList.toggle("open");
+    document.getElementById("toggle").classList.toggle("x");
+  },
+
   render: function () {
-    return React.createElement("div", { className: "header" }, React.createElement("ul", { style: { float: "left", height: 60 } }, React.createElement("li", { className: "wordbutton" }, React.createElement(Link, { to: "home" }, React.createElement("img", { className: "logo", src: "../pictures/logo.png" }))), React.createElement("li", { className: "headerdesc" }, "CREATE OUR OWN PATH")), React.createElement("ul", { style: { float: "right" } }, React.createElement("li", { className: "wordbutton" }, React.createElement(Link, { to: "home" }, "HOME")), React.createElement("li", { className: "wordbutton" }, React.createElement("a", { href: "resume.pdf" }, "RESUME")), React.createElement("li", { className: "wordbutton" }, React.createElement(Link, { to: "team" }, "TEAM"))));
+    return React.createElement("div", { className: "header" }, React.createElement("div", { className: "custom-wrapper pure-g", id: "menu" }, React.createElement("div", { className: "pure-u-1 pure-u-md-2-3" }, React.createElement("div", { className: "pure-menu" }, React.createElement(Link, { to: "home" }, React.createElement("img", { className: "logo", src: "../pictures/logo.png" })), React.createElement("div", { className: "headerdesc" }, "CREATE OUR OWN PATH"), React.createElement("a", { className: "custom-toggle", onClick: this._toggleMenu, id: "toggle" }, React.createElement("s", { className: "bar" }), React.createElement("s", { className: "bar" })))), React.createElement("div", { className: "pure-u-1 pure-u-md-1-3" }, React.createElement("div", { className: "pure-menu pure-menu-horizontal custom-menu-3 custom-can-transform" }, React.createElement("ul", { className: "pure-menu-list" }, React.createElement("li", { className: "pure-menu-item wordbutton" }, React.createElement(Link, { to: "home" }, "HOME")), React.createElement("li", { className: "pure-menu-item wordbutton" }, React.createElement("a", { href: "resume.pdf" }, "RESUME")), React.createElement("li", { className: "pure-menu-item wordbutton" }, React.createElement(Link, { to: "team" }, "TEAM")))))));
   } });
 
 module.exports = Header;

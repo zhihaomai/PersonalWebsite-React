@@ -11,46 +11,85 @@
     margin: 10px;
     font-size: 12px; }
 
-.header {
-  background: white;
-  box-shadow: 0 0 5px -2px black;
+.header .logo {
+  margin-left: 10px;
+  height: 60px;
+  width: 60px; }
+.header .wordbutton {
+  font-family: 'Abel', sans-serif;
+  font-weight: bold;
+  line-height: 40px;
+  padding: 10px 20px; }
+.header .headerdesc {
+  border-left: 1px solid #C62828;
+  color: #C62828;
   display: inline-block;
   font-family: 'Abel', sans-serif;
   font-weight: bold;
+  line-height: 40px;
+  margin: 10px 0px 10px 10px;
+  padding-left: 10px;
+  vertical-align: top; }
+.header .custom-wrapper {
+  background-color: white;
+  -webkit-font-smoothing: antialiased;
   height: 60px;
-  left: 0;
-  min-width: 700px;
+  box-shadow: 0 0 5px -2px black;
+  overflow: hidden;
+  -webkit-transition: height 0.5s;
+  -moz-transition: height 0.5s;
+  -ms-transition: height 0.5s;
+  transition: height 0.5s;
   position: fixed;
-  right: 0;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 1; }
-  .header ul {
-    display: inherit; }
-  .header ul li {
-    display: inline-block;
-    margin: auto 0;
-    padding: 0 20px;
-    vertical-align: top; }
-  .header .logo {
-    height: 60px;
-    width: 60px; }
-  .header .wordbutton {
-    line-height: 60px; }
-  .header .firstglyphbutton {
-    float: right;
-    line-height: 60px;
-    padding: 0 30px 0 6px; }
-  .header .glyphbutton {
-    float: right;
-    line-height: 60px;
-    padding: 0 6px; }
-  .header .glyphbutton:first-child {
-    padding-right: 20px; }
-  .header .headerdesc {
-    border-left: 1px solid #C62828;
-    color: #C62828;
-    line-height: 40px;
-    margin: 10px 0px; }
+.header .custom-wrapper.open {
+  height: 250px; }
+.header .custom-menu-3 {
+  text-align: right; }
+.header .custom-toggle {
+  width: 40px;
+  height: 60px;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none; }
+.header .custom-toggle .bar {
+  background-color: #C62828;
+  display: block;
+  width: 20px;
+  height: 3px;
+  border-radius: 100px;
+  position: absolute;
+  top: 30px;
+  right: 10px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s; }
+.header .custom-toggle .bar:first-child {
+  -webkit-transform: translateY(-6px);
+  -moz-transform: translateY(-6px);
+  -ms-transform: translateY(-6px);
+  transform: translateY(-6px); }
+.header .custom-toggle.x .bar {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg); }
+.header .custom-toggle.x .bar:first-child {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg); }
+@media (max-width: 47.999em) {
+  .header .custom-menu-3 {
+    text-align: left; }
+  .header .custom-toggle {
+    display: block; } }
 
 .homePage .fb-video {
   margin: 20px 0px;
