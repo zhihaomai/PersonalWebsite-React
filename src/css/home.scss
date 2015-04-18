@@ -2,8 +2,41 @@
 @import "constants/shadows";
 
 .homePage {
-	.fb-video {
-		margin: 20px 0px;
-		max-width: 900px;
+	
+	.banner {
+		margin-bottom: -4px;
+		min-width: 800px;
+		opacity: 0.4;
+		width: 100%;
+	}
+
+	.bannerContainer {
+		background: black;
+		overflow: hidden;
+	}
+
+	.bannerText {
+		font-family: 'Abel', sans-serif;			
+		font-size: 6vmax;
+    	font-weight: bold;
+		position: absolute;
+		padding: 4vmax;
+		top: 60px;
+		left: 0px;
+		width: 100%;
+	}
+
+	.bannerDesc {
+		font-family: 'Abel', sans-serif;	
+		font-size: 2vmax;
+		font-weight: normal;
+	}
+
+	.bannerButton {
+		border-radius: 4px;
+		background: $red;
+		color: white;
+		font-size: 2vmax;
+		margin-top: 2vw;
 	}
 }

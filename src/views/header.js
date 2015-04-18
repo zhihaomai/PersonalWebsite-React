@@ -47,7 +47,7 @@ var Header = React.createClass({
     return (
       <div className="header">
         <div className="custom-wrapper pure-g" id="menu">
-            <div className="pure-u-1 pure-u-md-2-3">
+            <div className="pure-u-1 pure-u-md-1-3">
               <div className="pure-menu">
                 <Link to="home">
                   <img className="logo" src="../pictures/logo.png"/>
@@ -60,7 +60,7 @@ var Header = React.createClass({
                 </a>
               </div>
             </div>
-            <div className="pure-u-1 pure-u-md-1-3">
+            <div className="pure-u-1 pure-u-md-2-3">
                 <div className="pure-menu pure-menu-horizontal custom-menu-3 custom-can-transform">
                     <ul className="pure-menu-list">
                       <li className="pure-menu-item wordbutton">

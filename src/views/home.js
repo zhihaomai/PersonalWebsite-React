@@ -10,32 +10,31 @@ var Footer = require('./footer');
 
 var Home = React.createClass({
 
-  componentDidMount: function() {
-    (function(d, s, id) {  
-      var js, fjs = d.getElementsByTagName(s)[0];  
-      if (d.getElementById(id)) return;  
-      js = d.createElement(s); js.id = id;  
-      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";  
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
+  _renderBanner: function() {
+    return (
+      <div className="pure-g">
+        <div className="pure-u-1 pure-u-md-1-1 bannerContainer">
+          <img className="banner" src="../pictures/temp_banner.jpg"/>
+          <div className="bannerText">
+            <div style={{display: 'block'}} className="fa fa-play-circle"></div>
+            <div>ZHI FILMS</div>
+            <div className="bannerDesc">
+              Internship Vlogs, GoPro Adventures, and Life Moments
+            </div>
+            <button className="pure-button bannerButton">Take A Glimpse</button>
+          </div>
+        </div>
+        <div style={{height: 800}} className="pure-u-1 pure-u-md-1-1"></div>
+      </div>
+    );
   },
-
-	_onClick: function() {
-		console.log ("HEY");
-	},
 
   render: function() {
     return (
       <div className="homePage">
         <Header />
         <div className="content">
-          <div  
-            className="fb-video" 
-            data-allowfullscreen="true" 
-            data-href="https://www.facebook.com/zhifilms/videos/1576962825903907/">
-            <div className="fb-xfbml-parse-ignore">
-            </div>
-          </div>
+          {this._renderBanner()}
         	<Footer />
         </div>
       </div>

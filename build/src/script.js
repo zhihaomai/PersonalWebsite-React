@@ -32023,7 +32023,7 @@ var Header = React.createClass({ displayName: "Header",
   },
 
   render: function () {
-    return React.createElement("div", { className: "header" }, React.createElement("div", { className: "custom-wrapper pure-g", id: "menu" }, React.createElement("div", { className: "pure-u-1 pure-u-md-2-3" }, React.createElement("div", { className: "pure-menu" }, React.createElement(Link, { to: "home" }, React.createElement("img", { className: "logo", src: "../pictures/logo.png" })), React.createElement("div", { className: "headerdesc" }, "CREATE OUR OWN PATH"), React.createElement("a", { className: "custom-toggle", onClick: this._toggleMenu, id: "toggle" }, React.createElement("s", { className: "bar" }), React.createElement("s", { className: "bar" })))), React.createElement("div", { className: "pure-u-1 pure-u-md-1-3" }, React.createElement("div", { className: "pure-menu pure-menu-horizontal custom-menu-3 custom-can-transform" }, React.createElement("ul", { className: "pure-menu-list" }, React.createElement("li", { className: "pure-menu-item wordbutton" }, React.createElement(Link, { to: "home" }, "HOME")), React.createElement("li", { className: "pure-menu-item wordbutton" }, React.createElement("a", { href: "resume.pdf" }, "RESUME")), React.createElement("li", { className: "pure-menu-item wordbutton" }, React.createElement(Link, { to: "team" }, "TEAM")))))));
+    return React.createElement("div", { className: "header" }, React.createElement("div", { className: "custom-wrapper pure-g", id: "menu" }, React.createElement("div", { className: "pure-u-1 pure-u-md-1-3" }, React.createElement("div", { className: "pure-menu" }, React.createElement(Link, { to: "home" }, React.createElement("img", { className: "logo", src: "../pictures/logo.png" })), React.createElement("div", { className: "headerdesc" }, "CREATE OUR OWN PATH"), React.createElement("a", { className: "custom-toggle", onClick: this._toggleMenu, id: "toggle" }, React.createElement("s", { className: "bar" }), React.createElement("s", { className: "bar" })))), React.createElement("div", { className: "pure-u-1 pure-u-md-2-3" }, React.createElement("div", { className: "pure-menu pure-menu-horizontal custom-menu-3 custom-can-transform" }, React.createElement("ul", { className: "pure-menu-list" }, React.createElement("li", { className: "pure-menu-item wordbutton" }, React.createElement(Link, { to: "home" }, "HOME")), React.createElement("li", { className: "pure-menu-item wordbutton" }, React.createElement("a", { href: "resume.pdf" }, "RESUME")), React.createElement("li", { className: "pure-menu-item wordbutton" }, React.createElement(Link, { to: "team" }, "TEAM")))))));
   } });
 
 module.exports = Header;
@@ -32045,26 +32045,12 @@ var Footer = require("./footer");
 
 var Home = React.createClass({ displayName: "Home",
 
-  componentDidMount: function () {
-    (function (d, s, id) {
-      var js,
-          fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s);js.id = id;
-      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
-      fjs.parentNode.insertBefore(js, fjs);
-    })(document, "script", "facebook-jssdk");
-  },
-
-  _onClick: function () {
-    console.log("HEY");
+  _renderBanner: function () {
+    return React.createElement("div", { className: "pure-g" }, React.createElement("div", { className: "pure-u-1 pure-u-md-1-1 bannerContainer" }, React.createElement("img", { className: "banner", src: "../pictures/temp_banner.jpg" }), React.createElement("div", { className: "bannerText" }, React.createElement("div", { style: { display: "block" }, className: "fa fa-play-circle" }), React.createElement("div", null, "ZHI FILMS"), React.createElement("div", { className: "bannerDesc" }, "Internship Vlogs, GoPro Adventures, and Life Moments"), React.createElement("button", { className: "pure-button bannerButton" }, "Take A Glimpse"))), React.createElement("div", { style: { height: 800 }, className: "pure-u-1 pure-u-md-1-1" }));
   },
 
   render: function () {
-    return React.createElement("div", { className: "homePage" }, React.createElement(Header, null), React.createElement("div", { className: "content" }, React.createElement("div", {
-      className: "fb-video",
-      "data-allowfullscreen": "true",
-      "data-href": "https://www.facebook.com/zhifilms/videos/1576962825903907/" }, React.createElement("div", { className: "fb-xfbml-parse-ignore" })), React.createElement(Footer, null)));
+    return React.createElement("div", { className: "homePage" }, React.createElement(Header, null), React.createElement("div", { className: "content" }, this._renderBanner(), React.createElement(Footer, null)));
   } });
 
 module.exports = Home;
