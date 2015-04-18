@@ -67,9 +67,6 @@ var Header = React.createClass({
                         <Link to="home">HOME</Link>
                       </li>        
                       <li className="pure-menu-item wordbutton">
-                        <a href="resume.pdf">RESUME</a>
-                      </li>
-                      <li className="pure-menu-item wordbutton">
                         <Link to="team">TEAM</Link>
                       </li>
                     </ul>
