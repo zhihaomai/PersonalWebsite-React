@@ -58,6 +58,11 @@ var Home = React.createClass({
       <div className="pure-g">
         <div className="pure-u-1 pure-u-md-2-3 container">
           <div className="contentContainer">
+            <iframe 
+              src="https://www.google.com/maps/d/u/0/embed?mid=zfj9ky2F58qs.k7ZI_xWEzm8k" 
+              width="100%" 
+              height="100%"
+              style={{border:0}}></iframe>
           </div>
         </div>
         <div className="pure-u-1 pure-u-md-1-3 container">

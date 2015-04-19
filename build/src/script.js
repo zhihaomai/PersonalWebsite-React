@@ -32074,7 +32074,11 @@ var Home = React.createClass({ displayName: "Home",
   },
 
   _renderNews: function () {
-    return React.createElement("div", { className: "pure-g" }, React.createElement("div", { className: "pure-u-1 pure-u-md-2-3 container" }, React.createElement("div", { className: "contentContainer" })), React.createElement("div", { className: "pure-u-1 pure-u-md-1-3 container" }, React.createElement("a", { className: "twitter-timeline", "data-widget-id": "589509406125006848" })));
+    return React.createElement("div", { className: "pure-g" }, React.createElement("div", { className: "pure-u-1 pure-u-md-2-3 container" }, React.createElement("div", { className: "contentContainer" }, React.createElement("iframe", {
+      src: "https://www.google.com/maps/d/u/0/embed?mid=zfj9ky2F58qs.k7ZI_xWEzm8k",
+      width: "100%",
+      height: "100%",
+      style: { border: 0 } }))), React.createElement("div", { className: "pure-u-1 pure-u-md-1-3 container" }, React.createElement("a", { className: "twitter-timeline", "data-widget-id": "589509406125006848" })));
   },
 
   render: function () {
