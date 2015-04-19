@@ -20,82 +20,82 @@ var Team = React.createClass({
                 name="Zhihao"
                 src="../team/mai_dp.jpg"
                 role="Founder"
-                desc=""/>
+                desc="Active role in all content creation."/>
               <TeamMember 
                 name="Gina"
                 src="../team/gina_dp.jpg"
-                role="Music and Creative Content"
-                desc=""/>
+                role="Main Content Contributer"
+                desc="Vlogs and GoPro footage."/>
               <TeamMember 
                 name="Kevin"
                 src="../team/bedi_dp.jpg"
-                role="Audio and Technical Content"
-                desc=""/>
+                role="Content and Music Contributer"
+                desc="Vlogs footage and audio creation."/>
               <TeamMember 
                 name="Alan"
                 src="../team/chiu_dp.jpg"
                 role="Content Contributer"
-                desc=""/>
+                desc="GoPro footage."/>
               <TeamMember 
                 name="Alvin"
                 src="../team/liao_dp.jpg"
                 role="Content Contributer"
-                desc=""/>
+                desc="GoPro footage."/>
               <TeamMember 
                 name="Richard"
                 src="../team/pham_dp.jpg"
                 role="Content Contributer"
-                desc=""/>
+                desc="GoPro footage."/>
              <TeamMember 
                 name="Wesley"
                 src="../team/tam_dp.jpg"
                 role="Content Contributer"
-                desc=""/>
+                desc="GoPro footage."/>
               <TeamMember 
                 name="Kelvin"
                 src="../team/chan_dp.jpg"
                 role="Content Contributer"
-                desc=""/>
+                desc="GoPro footage."/>
               <TeamMember 
                 name="Harry"
                 src="../team/grewal_dp.jpg"
                 role="Content Contributer"
-                desc=""/>
+                desc="GoPro footage."/>
               <TeamMember 
                 name="Stephen"
                 src="../team/ng_dp.jpg"
                 role="Content Contributer"
-                desc=""/>
+                desc="GoPro footage."/>
               <TeamMember 
                 name="Anthony"
                 src="../team/siu_dp.jpg"
                 role="Content Contributer"
-                desc=""/>
+                desc="GoPro footage."/>
               <TeamMember 
                 name="Vincent"
                 src="../team/lo_dp.jpg"
                 role="Content Contributer"
-                desc=""/>
+                desc="GoPro footage."/>
               <TeamMember 
                 name="Michael"
                 src="../team/mike_dp.jpg"
                 role="Content Contributer"
-                desc=""/>
+                desc="GoPro footage."/>
               <TeamMember 
                 name="Lawrence"
                 src="../team/larry_dp.jpg"
                 role="Content Contributer"
-                desc=""/>
+                desc="GoPro footage."/>
               <TeamMember 
                 name="Prince"
                 src="../team/prince.jpg"
                 role="Content Contributer"
-                desc=""/>
+                desc="Vlogs footage."/>
               <TeamMember 
                 name="Jasmeet"
                 src="../team/jas_dp.jpg"
                 role="Content Contributer"
-                desc=""/>
+                desc="Vlogs footage."/>
           </div>
         	<Footer />
         </div>

@@ -12,7 +12,7 @@
 		background: white;
 		border-radius: 5px;
 		border: 1px $darkGray solid;
-		min-height: 260px;
+		min-height: 215px;
 		margin: 40px 10px 10px 10px;
 	}
 
@@ -37,7 +37,8 @@
 	.memberRole {
 		border-bottom: 1px solid $darkGray;
 		color: gray;
-		font-size: 14px;
+  		font-family: 'Abel', sans-serif;
+		font-size: 16px;
 		padding: 0px 0px 10px 0px;
 		width: 100%;
 	}
@@ -45,6 +46,7 @@
 	.memberDesc {
 		color: black;
 		padding: 10px;
+  		font-family: 'Abel', sans-serif;
 		font-size: 12px;
 	}
 }

@@ -9,6 +9,7 @@ var $ = require("jquery");
 // Internal dependencies
 var Home = require("./views/home.js");
 var Team = require("./views/team.js");
+var Contact = require("./views/contact.js");
 
 var DefaultRoute = Router.DefaultRoute;
 var Link = Router.Link;
@@ -20,7 +21,7 @@ var App = React.createClass({ displayName: "App",
     return React.createElement(RouteHandler, null);
   } });
 
-var routes = React.createElement(Route, { name: "app", path: "/", handler: App }, React.createElement(DefaultRoute, { name: "home", handler: Home }), React.createElement(Route, { name: "team", path: "/team", handler: Team }));
+var routes = React.createElement(Route, { name: "app", path: "/", handler: App }, React.createElement(DefaultRoute, { name: "home", handler: Home }), React.createElement(Route, { name: "team", path: "/team", handler: Team }), React.createElement(Route, { name: "contact", path: "/contact", handler: Contact }));
 
 $(function () {
   Router.run(routes, function (Handler) {
@@ -30,7 +31,7 @@ $(function () {
 
 
 
-},{"./views/home.js":201,"./views/team.js":202,"jquery":3,"react":197,"react-router":28}],2:[function(require,module,exports){
+},{"./views/contact.js":199,"./views/home.js":202,"./views/team.js":203,"jquery":3,"react":197,"react-router":28}],2:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -31960,7 +31961,28 @@ var TeamMember = React.createClass({ displayName: "TeamMember",
 module.exports = TeamMember;
 
 
-},{"./footer":199,"./header":200,"react":197}],199:[function(require,module,exports){
+},{"./footer":200,"./header":201,"react":197}],199:[function(require,module,exports){
+"use strict";
+
+/* Contact Page
+ * ------------
+ */
+
+var React = require("react");
+
+var Header = require("./header");
+var Footer = require("./footer");
+
+var Contact = React.createClass({ displayName: "Contact",
+
+  render: function () {
+    return React.createElement("div", { className: "contactPage" }, React.createElement(Header, null), React.createElement("div", { className: "content" }, React.createElement(Footer, null)));
+  } });
+
+module.exports = Contact;
+
+
+},{"./footer":200,"./header":201,"react":197}],200:[function(require,module,exports){
 "use strict";
 
 /* Footer
@@ -31978,7 +32000,7 @@ var Footer = React.createClass({ displayName: "Footer",
 module.exports = Footer;
 
 
-},{"react":197}],200:[function(require,module,exports){
+},{"react":197}],201:[function(require,module,exports){
 "use strict";
 
 /* Header
@@ -32023,14 +32045,14 @@ var Header = React.createClass({ displayName: "Header",
   },
 
   render: function () {
-    return React.createElement("div", { className: "header" }, React.createElement("div", { className: "custom-wrapper pure-g", id: "menu" }, React.createElement("div", { className: "pure-u-1 pure-u-md-1-3" }, React.createElement("div", { className: "pure-menu" }, React.createElement(Link, { to: "home" }, React.createElement("img", { className: "logo", src: "../pictures/logo.png" })), React.createElement("div", { className: "headerdesc" }, "CREATE OUR OWN PATH"), React.createElement("a", { className: "custom-toggle", onClick: this._toggleMenu, id: "toggle" }, React.createElement("s", { className: "bar" }), React.createElement("s", { className: "bar" })))), React.createElement("div", { className: "pure-u-1 pure-u-md-2-3" }, React.createElement("div", { className: "pure-menu pure-menu-horizontal custom-menu-3 custom-can-transform" }, React.createElement("ul", { className: "pure-menu-list" }, React.createElement("li", { className: "pure-menu-item wordbutton" }, React.createElement(Link, { to: "home" }, "HOME")), React.createElement("li", { className: "pure-menu-item wordbutton" }, React.createElement(Link, { to: "team" }, "TEAM")))))));
+    return React.createElement("div", { className: "header" }, React.createElement("div", { className: "custom-wrapper pure-g", id: "menu" }, React.createElement("div", { className: "pure-u-1 pure-u-md-1-3" }, React.createElement("div", { className: "pure-menu" }, React.createElement(Link, { to: "home" }, React.createElement("img", { className: "logo", src: "../pictures/logo.png" })), React.createElement("div", { className: "headerdesc" }, "CREATE OUR OWN PATH"), React.createElement("a", { className: "custom-toggle", onClick: this._toggleMenu, id: "toggle" }, React.createElement("s", { className: "bar" }), React.createElement("s", { className: "bar" })))), React.createElement("div", { className: "pure-u-1 pure-u-md-2-3" }, React.createElement("div", { className: "pure-menu pure-menu-horizontal custom-menu-3 custom-can-transform" }, React.createElement("ul", { className: "pure-menu-list" }, React.createElement("li", { className: "pure-menu-item wordbutton" }, React.createElement(Link, { to: "home" }, "HOME")), React.createElement("li", { className: "pure-menu-item wordbutton" }, React.createElement(Link, { to: "team" }, "TEAM")), React.createElement("li", { className: "pure-menu-item wordbutton" }, React.createElement(Link, { to: "contact" }, "CONTACT")))))));
   } });
 
 module.exports = Header;
 
 
 
-},{"react":197,"react-router":28}],201:[function(require,module,exports){
+},{"react":197,"react-router":28}],202:[function(require,module,exports){
 "use strict";
 
 /* Home Page
@@ -32099,7 +32121,7 @@ module.exports = Home;
 
 
 
-},{"./footer":199,"./header":200,"react":197}],202:[function(require,module,exports){
+},{"./footer":200,"./header":201,"react":197}],203:[function(require,module,exports){
 "use strict";
 
 /* Team Page
@@ -32119,70 +32141,70 @@ var Team = React.createClass({ displayName: "Team",
       name: "Zhihao",
       src: "../team/mai_dp.jpg",
       role: "Founder",
-      desc: "" }), React.createElement(TeamMember, {
+      desc: "Active role in all content creation." }), React.createElement(TeamMember, {
       name: "Gina",
       src: "../team/gina_dp.jpg",
-      role: "Music and Creative Content",
-      desc: "" }), React.createElement(TeamMember, {
+      role: "Main Content Contributer",
+      desc: "Vlogs and GoPro footage." }), React.createElement(TeamMember, {
       name: "Kevin",
       src: "../team/bedi_dp.jpg",
-      role: "Audio and Technical Content",
-      desc: "" }), React.createElement(TeamMember, {
+      role: "Content and Music Contributer",
+      desc: "Vlogs footage and audio creation." }), React.createElement(TeamMember, {
       name: "Alan",
       src: "../team/chiu_dp.jpg",
       role: "Content Contributer",
-      desc: "" }), React.createElement(TeamMember, {
+      desc: "GoPro footage." }), React.createElement(TeamMember, {
       name: "Alvin",
       src: "../team/liao_dp.jpg",
       role: "Content Contributer",
-      desc: "" }), React.createElement(TeamMember, {
+      desc: "GoPro footage." }), React.createElement(TeamMember, {
       name: "Richard",
       src: "../team/pham_dp.jpg",
       role: "Content Contributer",
-      desc: "" }), React.createElement(TeamMember, {
+      desc: "GoPro footage." }), React.createElement(TeamMember, {
       name: "Wesley",
       src: "../team/tam_dp.jpg",
       role: "Content Contributer",
-      desc: "" }), React.createElement(TeamMember, {
+      desc: "GoPro footage." }), React.createElement(TeamMember, {
       name: "Kelvin",
       src: "../team/chan_dp.jpg",
       role: "Content Contributer",
-      desc: "" }), React.createElement(TeamMember, {
+      desc: "GoPro footage." }), React.createElement(TeamMember, {
       name: "Harry",
       src: "../team/grewal_dp.jpg",
       role: "Content Contributer",
-      desc: "" }), React.createElement(TeamMember, {
+      desc: "GoPro footage." }), React.createElement(TeamMember, {
       name: "Stephen",
       src: "../team/ng_dp.jpg",
       role: "Content Contributer",
-      desc: "" }), React.createElement(TeamMember, {
+      desc: "GoPro footage." }), React.createElement(TeamMember, {
       name: "Anthony",
       src: "../team/siu_dp.jpg",
       role: "Content Contributer",
-      desc: "" }), React.createElement(TeamMember, {
+      desc: "GoPro footage." }), React.createElement(TeamMember, {
       name: "Vincent",
       src: "../team/lo_dp.jpg",
       role: "Content Contributer",
-      desc: "" }), React.createElement(TeamMember, {
+      desc: "GoPro footage." }), React.createElement(TeamMember, {
       name: "Michael",
       src: "../team/mike_dp.jpg",
       role: "Content Contributer",
-      desc: "" }), React.createElement(TeamMember, {
+      desc: "GoPro footage." }), React.createElement(TeamMember, {
       name: "Lawrence",
       src: "../team/larry_dp.jpg",
       role: "Content Contributer",
-      desc: "" }), React.createElement(TeamMember, {
+      desc: "GoPro footage." }), React.createElement(TeamMember, {
       name: "Prince",
       src: "../team/prince.jpg",
       role: "Content Contributer",
-      desc: "" }), React.createElement(TeamMember, {
+      desc: "Vlogs footage." }), React.createElement(TeamMember, {
       name: "Jasmeet",
       src: "../team/jas_dp.jpg",
       role: "Content Contributer",
-      desc: "" })), React.createElement(Footer, null)));
+      desc: "Vlogs footage." })), React.createElement(Footer, null)));
   } });
 
 module.exports = Team;
 
 
-},{"./TeamMember":198,"./footer":199,"./header":200,"react":197}]},{},[1]);
+},{"./TeamMember":198,"./footer":200,"./header":201,"react":197}]},{},[1]);
