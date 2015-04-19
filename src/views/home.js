@@ -10,27 +10,6 @@ var Footer = require('./footer');
 
 var Home = React.createClass({
   
-  componentWillMount: function() {
-    !function(d,s,id) {
-      var js, fjs=d.getElementsByTagName(s)[0];
-      var p=/^http:/.test(d.location)?'http':'https';
-      if(d.getElementById(id)) return;
-      js=d.createElement(s);
-      js.id=id;
-      js.src=p+"://platform.twitter.com/widgets.js";
-      fjs.parentNode.insertBefore(js,fjs);
-    }(document,"script","twitter-wjs");
-  },
-
-  componentWillUnmount: function() {
-    !function(d,s,id) {
-      var js = d.getElementById(id);
-      if (js.parentNode) {
-        js.parentNode.removeChild(js);
-      }
-    }(document,"script","twitter-wjs");
-  },
-  
   _renderBanner: function() {
     return (
       <div className="pure-g">
@@ -53,10 +32,10 @@ var Home = React.createClass({
     );
   },
 
-  _renderNews: function() {
+  _renderMap: function() {
     return (
       <div className="pure-g">
-        <div className="pure-u-1 pure-u-md-2-3 container">
+        <div className="pure-u-1 pure-u-md-3-3 container">
           <div className="contentContainer">
             <iframe 
               src="https://www.google.com/maps/d/u/0/embed?mid=zfj9ky2F58qs.k7ZI_xWEzm8k" 
@@ -64,9 +43,6 @@ var Home = React.createClass({
               height="100%"
               style={{border:0}}></iframe>
           </div>
-        </div>
-        <div className="pure-u-1 pure-u-md-1-3 container">
-          <a className="twitter-timeline" data-widget-id="589509406125006848"></a>
         </div>
       </div>
     );
@@ -107,6 +83,37 @@ var Home = React.createClass({
     );
   },
 
+  // CURRENTLY UNUSED -----------------------------------------
+  _renderTweets: function() {
+    return (
+      <div className="pure-u-1 pure-u-md-1-3 container">
+        <a className="twitter-timeline" data-widget-id="589509406125006848"></a>
+      </div>
+    );
+  },
+
+  componentWillMount: function() {
+    !function(d,s,id) {
+      var js, fjs=d.getElementsByTagName(s)[0];
+      var p=/^http:/.test(d.location)?'http':'https';
+      if(d.getElementById(id)) return;
+      js=d.createElement(s);
+      js.id=id;
+      js.src=p+"://platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js,fjs);
+    }(document,"script","twitter-wjs");
+  },
+
+  componentWillUnmount: function() {
+    !function(d,s,id) {
+      var js = d.getElementById(id);
+      if (js.parentNode) {
+        js.parentNode.removeChild(js);
+      }
+    }(document,"script","twitter-wjs");
+  },
+  // -------------------------------------------------------------
+
   render: function() {
     return (
       <div className="homePage">
@@ -114,7 +121,7 @@ var Home = React.createClass({
         <div className="content">
           {this._renderBanner()}
           {this._renderBlobs()}
-          {this._renderNews()}
+          {this._renderMap()}
         	<Footer />
         </div>
       </div>

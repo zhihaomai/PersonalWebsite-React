@@ -32045,6 +32045,29 @@ var Footer = require("./footer");
 
 var Home = React.createClass({ displayName: "Home",
 
+  _renderBanner: function () {
+    return React.createElement("div", { className: "pure-g" }, React.createElement("div", { className: "pure-u-1 pure-u-md-1-1 bannerContainer" }, React.createElement("img", { className: "banner", src: "../pictures/temp_banner.jpg" }), React.createElement("div", { className: "bannerText" }, React.createElement("div", { style: { display: "block" }, className: "fa fa-play-circle" }), React.createElement("div", null, "ZHI FILMS"), React.createElement("div", { className: "bannerDesc" }, "Internship Vlogs, GoPro Adventures, Life Moments"), React.createElement("a", {
+      className: "pure-button bannerButton",
+      href: "http://www.facebook.com/zhifilms" }, "View Now"))));
+  },
+
+  _renderMap: function () {
+    return React.createElement("div", { className: "pure-g" }, React.createElement("div", { className: "pure-u-1 pure-u-md-3-3 container" }, React.createElement("div", { className: "contentContainer" }, React.createElement("iframe", {
+      src: "https://www.google.com/maps/d/u/0/embed?mid=zfj9ky2F58qs.k7ZI_xWEzm8k",
+      width: "100%",
+      height: "100%",
+      style: { border: 0 } }))));
+  },
+
+  _renderBlobs: function () {
+    return React.createElement("div", { className: "blob pure-g" }, React.createElement("div", { className: "blobContainer pure-u-1 pure-u-md-1-2 pure-u-lg-1-4" }, React.createElement("i", { className: "fa fa-plane fa-4x" }), React.createElement("div", { className: "blobTitle" }, "TRAVEL"), React.createElement("div", { className: "blobDesc" }, "We travel to feel alive, to become less ignorant about" + " " + "the world around us, to find a better self.")), React.createElement("div", { className: "blobContainer pure-u-1 pure-u-md-1-2 pure-u-lg-1-4" }, React.createElement("i", { className: "fa fa-camera-retro fa-4x" }), React.createElement("div", { className: "blobTitle" }, "RECORD"), React.createElement("div", { className: "blobDesc" }, "We record the memories we want to remember forever, to relive the" + " " + "greatest moments of our lives.")), React.createElement("div", { className: "blobContainer pure-u-1 pure-u-md-1-2 pure-u-lg-1-4" }, React.createElement("i", { className: "fa fa-wrench fa-4x" }), React.createElement("div", { className: "blobTitle" }, "CREATE"), React.createElement("div", { className: "blobDesc" }, "We create to communicate and express ideas to others, to inspire" + " " + "activity and change.")), React.createElement("div", { className: "blobContainer pure-u-1 pure-u-md-1-2 pure-u-lg-1-4" }, React.createElement("i", { className: "fa fa-users fa-4x" }), React.createElement("div", { className: "blobTitle" }, "UNITE"), React.createElement("div", { className: "blobDesc" }, "We travel, record, and create to unite" + " " + "people with similar desires and experiences.")));
+  },
+
+  // CURRENTLY UNUSED -----------------------------------------
+  _renderTweets: function () {
+    return React.createElement("div", { className: "pure-u-1 pure-u-md-1-3 container" }, React.createElement("a", { className: "twitter-timeline", "data-widget-id": "589509406125006848" }));
+  },
+
   componentWillMount: function () {
     !(function (d, s, id) {
       var js,
@@ -32066,27 +32089,10 @@ var Home = React.createClass({ displayName: "Home",
       }
     })(document, "script", "twitter-wjs");
   },
-
-  _renderBanner: function () {
-    return React.createElement("div", { className: "pure-g" }, React.createElement("div", { className: "pure-u-1 pure-u-md-1-1 bannerContainer" }, React.createElement("img", { className: "banner", src: "../pictures/temp_banner.jpg" }), React.createElement("div", { className: "bannerText" }, React.createElement("div", { style: { display: "block" }, className: "fa fa-play-circle" }), React.createElement("div", null, "ZHI FILMS"), React.createElement("div", { className: "bannerDesc" }, "Internship Vlogs, GoPro Adventures, Life Moments"), React.createElement("a", {
-      className: "pure-button bannerButton",
-      href: "http://www.facebook.com/zhifilms" }, "View Now"))));
-  },
-
-  _renderNews: function () {
-    return React.createElement("div", { className: "pure-g" }, React.createElement("div", { className: "pure-u-1 pure-u-md-2-3 container" }, React.createElement("div", { className: "contentContainer" }, React.createElement("iframe", {
-      src: "https://www.google.com/maps/d/u/0/embed?mid=zfj9ky2F58qs.k7ZI_xWEzm8k",
-      width: "100%",
-      height: "100%",
-      style: { border: 0 } }))), React.createElement("div", { className: "pure-u-1 pure-u-md-1-3 container" }, React.createElement("a", { className: "twitter-timeline", "data-widget-id": "589509406125006848" })));
-  },
-
-  _renderBlobs: function () {
-    return React.createElement("div", { className: "blob pure-g" }, React.createElement("div", { className: "blobContainer pure-u-1 pure-u-md-1-2 pure-u-lg-1-4" }, React.createElement("i", { className: "fa fa-plane fa-4x" }), React.createElement("div", { className: "blobTitle" }, "TRAVEL"), React.createElement("div", { className: "blobDesc" }, "We travel to feel alive, to become less ignorant about" + " " + "the world around us, to find a better self.")), React.createElement("div", { className: "blobContainer pure-u-1 pure-u-md-1-2 pure-u-lg-1-4" }, React.createElement("i", { className: "fa fa-camera-retro fa-4x" }), React.createElement("div", { className: "blobTitle" }, "RECORD"), React.createElement("div", { className: "blobDesc" }, "We record the memories we want to remember forever, to relive the" + " " + "greatest moments of our lives.")), React.createElement("div", { className: "blobContainer pure-u-1 pure-u-md-1-2 pure-u-lg-1-4" }, React.createElement("i", { className: "fa fa-wrench fa-4x" }), React.createElement("div", { className: "blobTitle" }, "CREATE"), React.createElement("div", { className: "blobDesc" }, "We create to communicate and express ideas to others, to inspire" + " " + "activity and change.")), React.createElement("div", { className: "blobContainer pure-u-1 pure-u-md-1-2 pure-u-lg-1-4" }, React.createElement("i", { className: "fa fa-users fa-4x" }), React.createElement("div", { className: "blobTitle" }, "UNITE"), React.createElement("div", { className: "blobDesc" }, "We travel, record, and create to unite" + " " + "people with similar desires and experiences.")));
-  },
+  // -------------------------------------------------------------
 
   render: function () {
-    return React.createElement("div", { className: "homePage" }, React.createElement(Header, null), React.createElement("div", { className: "content" }, this._renderBanner(), this._renderBlobs(), this._renderNews(), React.createElement(Footer, null)));
+    return React.createElement("div", { className: "homePage" }, React.createElement(Header, null), React.createElement("div", { className: "content" }, this._renderBanner(), this._renderBlobs(), this._renderMap(), React.createElement(Footer, null)));
   } });
 
 module.exports = Home;
