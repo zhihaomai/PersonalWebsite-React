@@ -32045,12 +32045,6 @@ var Footer = require("./footer");
 
 var Home = React.createClass({ displayName: "Home",
 
-  _renderBanner: function () {
-    return React.createElement("div", { className: "pure-g" }, React.createElement("div", { className: "pure-u-1 pure-u-md-1-1 bannerContainer" }, React.createElement("img", { className: "banner", src: "../pictures/temp_banner.jpg" }), React.createElement("div", { className: "bannerText" }, React.createElement("div", { style: { display: "block" }, className: "fa fa-play-circle" }), React.createElement("div", null, "ZHI FILMS"), React.createElement("div", { className: "bannerDesc" }, "Internship Vlogs, GoPro Adventures, Life Moments"), React.createElement("a", {
-      className: "pure-button bannerButton",
-      href: "http://www.facebook.com/zhifilms" }, "View Now"))));
-  },
-
   componentWillMount: function () {
     !(function (d, s, id) {
       var js,
@@ -32073,6 +32067,12 @@ var Home = React.createClass({ displayName: "Home",
     })(document, "script", "twitter-wjs");
   },
 
+  _renderBanner: function () {
+    return React.createElement("div", { className: "pure-g" }, React.createElement("div", { className: "pure-u-1 pure-u-md-1-1 bannerContainer" }, React.createElement("img", { className: "banner", src: "../pictures/temp_banner.jpg" }), React.createElement("div", { className: "bannerText" }, React.createElement("div", { style: { display: "block" }, className: "fa fa-play-circle" }), React.createElement("div", null, "ZHI FILMS"), React.createElement("div", { className: "bannerDesc" }, "Internship Vlogs, GoPro Adventures, Life Moments"), React.createElement("a", {
+      className: "pure-button bannerButton",
+      href: "http://www.facebook.com/zhifilms" }, "View Now"))));
+  },
+
   _renderNews: function () {
     return React.createElement("div", { className: "pure-g" }, React.createElement("div", { className: "pure-u-1 pure-u-md-2-3 container" }, React.createElement("div", { className: "contentContainer" }, React.createElement("iframe", {
       src: "https://www.google.com/maps/d/u/0/embed?mid=zfj9ky2F58qs.k7ZI_xWEzm8k",
@@ -32081,8 +32081,12 @@ var Home = React.createClass({ displayName: "Home",
       style: { border: 0 } }))), React.createElement("div", { className: "pure-u-1 pure-u-md-1-3 container" }, React.createElement("a", { className: "twitter-timeline", "data-widget-id": "589509406125006848" })));
   },
 
+  _renderBlobs: function () {
+    return React.createElement("div", { className: "blob pure-g" }, React.createElement("div", { className: "blobContainer pure-u-1 pure-u-md-1-2 pure-u-lg-1-4" }, React.createElement("i", { className: "fa fa-plane fa-4x" }), React.createElement("div", { className: "blobTitle" }, "TRAVEL"), React.createElement("div", { className: "blobDesc" }, "We travel to feel alive, to become less ignorant about" + " " + "the world around us, to find a better self.")), React.createElement("div", { className: "blobContainer pure-u-1 pure-u-md-1-2 pure-u-lg-1-4" }, React.createElement("i", { className: "fa fa-camera-retro fa-4x" }), React.createElement("div", { className: "blobTitle" }, "RECORD"), React.createElement("div", { className: "blobDesc" }, "We record the memories we want to remember forever, to relive the" + " " + "greatest moments of our lives.")), React.createElement("div", { className: "blobContainer pure-u-1 pure-u-md-1-2 pure-u-lg-1-4" }, React.createElement("i", { className: "fa fa-wrench fa-4x" }), React.createElement("div", { className: "blobTitle" }, "CREATE"), React.createElement("div", { className: "blobDesc" }, "We create to communicate and express ideas to others, to inspire" + " " + "activity and change.")), React.createElement("div", { className: "blobContainer pure-u-1 pure-u-md-1-2 pure-u-lg-1-4" }, React.createElement("i", { className: "fa fa-users fa-4x" }), React.createElement("div", { className: "blobTitle" }, "UNITE"), React.createElement("div", { className: "blobDesc" }, "We travel, record, and create to unite" + " " + "people with similar desires and experiences.")));
+  },
+
   render: function () {
-    return React.createElement("div", { className: "homePage" }, React.createElement(Header, null), React.createElement("div", { className: "content" }, this._renderBanner(), this._renderNews(), React.createElement(Footer, null)));
+    return React.createElement("div", { className: "homePage" }, React.createElement(Header, null), React.createElement("div", { className: "content" }, this._renderBanner(), this._renderBlobs(), this._renderNews(), React.createElement(Footer, null)));
   } });
 
 module.exports = Home;
@@ -32106,54 +32110,70 @@ var Team = React.createClass({ displayName: "Team",
 
   render: function () {
     return React.createElement("div", { className: "teamPage" }, React.createElement(Header, null), React.createElement("div", { className: "content" }, React.createElement("div", { className: "pure-g teamGrid" }, React.createElement(TeamMember, {
-      name: "Mai",
+      name: "Zhihao",
       src: "../team/mai_dp.jpg",
-      role: "President and Founder",
-      desc: "Known by many as 'shotcalla' aka" + " " + "'diamondkilla' aka 'playmaka', Mai has" + " " + "thrived in whatever role necessary." }), React.createElement(TeamMember, {
-      name: "Lam",
+      role: "Founder",
+      desc: "" }), React.createElement(TeamMember, {
+      name: "Gina",
       src: "../team/gina_dp.jpg",
-      role: "Chief Operations Officer",
-      desc: "Named Top 100 Most Influential People" + " " + "on Earth, Lam has broken records and barriers" + " " + "on her way to the top." }), React.createElement(TeamMember, {
-      name: "Bedi",
+      role: "Music and Creative Content",
+      desc: "" }), React.createElement(TeamMember, {
+      name: "Kevin",
       src: "../team/bedi_dp.jpg",
-      role: "Chief Technical Officer",
-      desc: "The founder of OmniJS, Mintr, Trade App," + " " + "and Playtube, Bedi is an absolute" + " " + "legend in the tech world." }), React.createElement(TeamMember, {
-      name: "Chiu",
+      role: "Audio and Technical Content",
+      desc: "" }), React.createElement(TeamMember, {
+      name: "Alan",
       src: "../team/chiu_dp.jpg",
-      role: "Chief Financial Officer",
-      desc: "Started as an RPG game developer, Chiu" + " " + "went into finance after selling his own RPG" + " " + "for 14 million dollars." }), React.createElement(TeamMember, {
-      name: "Liao",
+      role: "Content Contributer",
+      desc: "" }), React.createElement(TeamMember, {
+      name: "Alvin",
       src: "../team/liao_dp.jpg",
-      role: "VP, Marketing & Global Operations",
-      desc: "Sold his lemonade business for 4 million dollars" + " " + "at the age of 10, Liao was bred for this opportunity in marketing." }), React.createElement(TeamMember, {
-      name: "Pham",
+      role: "Content Contributer",
+      desc: "" }), React.createElement(TeamMember, {
+      name: "Richard",
       src: "../team/pham_dp.jpg",
-      role: "VP, Director of Engineering",
-      desc: "MMA fighter who ended his career early" + " " + "due to a lack of competition in the sport, Pham has now found" + " " + "a worthy challenge as the director of engineering." }), React.createElement(TeamMember, {
-      name: "Tam",
+      role: "Content Contributer",
+      desc: "" }), React.createElement(TeamMember, {
+      name: "Wesley",
       src: "../team/tam_dp.jpg",
-      role: "VP, Director of Design",
-      desc: "Known for his exotic tastes, Tam also" + " " + "shadows as the company representative" + " " + "at the Pokemon World Championships every year." }), React.createElement(TeamMember, {
-      name: "Chan",
+      role: "Content Contributer",
+      desc: "" }), React.createElement(TeamMember, {
+      name: "Kelvin",
       src: "../team/chan_dp.jpg",
-      role: "VP, Quality Assurance",
-      desc: "Guiness World Record holder for worst arachnophobia," + " " + "Chan ensures products and services are delivered moist and well." }), React.createElement(TeamMember, {
-      name: "Grewal",
+      role: "Content Contributer",
+      desc: "" }), React.createElement(TeamMember, {
+      name: "Harry",
       src: "../team/grewal_dp.jpg",
-      role: "VP, Finance & Accounting",
-      desc: "Co-founder of the Garden Guru, Grewal cuts" + " " + "budgets and expenses as well as he did bushes and scrubs." }), React.createElement(TeamMember, {
-      name: "Ng",
+      role: "Content Contributer",
+      desc: "" }), React.createElement(TeamMember, {
+      name: "Stephen",
       src: "../team/ng_dp.jpg",
-      role: "VP, Business Development",
-      desc: "After three ups and downs, Ng has blossomed" + " " + "into a business mogul, thirtsy for the blood of competitors." }), React.createElement(TeamMember, {
-      name: "Siu",
+      role: "Content Contributer",
+      desc: "" }), React.createElement(TeamMember, {
+      name: "Anthony",
       src: "../team/siu_dp.jpg",
-      role: "VP, Growth & Advertising",
-      desc: "Spent 3 years in the Jungle of Summoner's Rift," + " " + "Siu has emerged as a top talent in terms of company growth" }), React.createElement(TeamMember, {
-      name: "Lo",
+      role: "Content Contributer",
+      desc: "" }), React.createElement(TeamMember, {
+      name: "Vincent",
       src: "../team/lo_dp.jpg",
-      role: "Director of Human Resources",
-      desc: "Never one to shy away from conflict, Lo has been" + " " + "known to use unorthodox methods to solve problems in the worldplace." })), React.createElement(Footer, null)));
+      role: "Content Contributer",
+      desc: "" }), React.createElement(TeamMember, {
+      name: "Michael",
+      src: "../team/mike_dp.jpg",
+      role: "Content Contributer",
+      desc: "" }), React.createElement(TeamMember, {
+      name: "Lawrence",
+      src: "../team/larry_dp.jpg",
+      role: "Content Contributer",
+      desc: "" }), React.createElement(TeamMember, {
+      name: "Prince",
+      src: "../team/prince.jpg",
+      role: "Content Contributer",
+      desc: "" }), React.createElement(TeamMember, {
+      name: "Jasmeet",
+      src: "../team/jas_dp.jpg",
+      role: "Content Contributer",
+      desc: "" })), React.createElement(Footer, null)));
   } });
 
 module.exports = Team;

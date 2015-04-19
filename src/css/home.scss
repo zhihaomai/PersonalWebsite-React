@@ -50,5 +50,31 @@
 		border: 1px $darkGray solid;
 		border-radius: 4px;
 		height: 500px;
+		pointer-events: none;
+	}
+
+	.blob {
+		padding: 20px 0px;
+		background: $lightGray;	
+	}
+
+	.blobContainer {
+		font-family: 'Abel', sans-serif;
+    	font-weight: bold;
+		color: $grayText;
+		padding: 20px;
+	}
+
+	.blobTitle {
+		display: inline-block;
+  		font-size: 40px;
+  		padding-left: 20px;
+  		vertical-align: top;
+  		line-height: 70px;
+	}
+
+	.blobDesc {
+		margin-top: 10px;
+		padding: 0px 40px;
 	}
 }

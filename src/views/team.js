@@ -17,83 +17,85 @@ var Team = React.createClass({
         <div className="content">
           <div className="pure-g teamGrid">
               <TeamMember 
-                name="Mai"
+                name="Zhihao"
                 src="../team/mai_dp.jpg"
-                role="President and Founder"
-                desc="Known by many as 'shotcalla' aka
-                'diamondkilla' aka 'playmaka', Mai has
-                thrived in whatever role necessary."/>
+                role="Founder"
+                desc=""/>
               <TeamMember 
-                name="Lam"
+                name="Gina"
                 src="../team/gina_dp.jpg"
-                role="Chief Operations Officer"
-                desc="Named Top 100 Most Influential People
-                on Earth, Lam has broken records and barriers
-                on her way to the top."/>
+                role="Music and Creative Content"
+                desc=""/>
               <TeamMember 
-                name="Bedi"
+                name="Kevin"
                 src="../team/bedi_dp.jpg"
-                role="Chief Technical Officer"
-                desc="The founder of OmniJS, Mintr, Trade App,
-                and Playtube, Bedi is an absolute
-                legend in the tech world."/>
+                role="Audio and Technical Content"
+                desc=""/>
               <TeamMember 
-                name="Chiu"
+                name="Alan"
                 src="../team/chiu_dp.jpg"
-                role="Chief Financial Officer"
-                desc="Started as an RPG game developer, Chiu
-                went into finance after selling his own RPG
-                for 14 million dollars."/>
+                role="Content Contributer"
+                desc=""/>
               <TeamMember 
-                name="Liao"
+                name="Alvin"
                 src="../team/liao_dp.jpg"
-                role="VP, Marketing & Global Operations"
-                desc="Sold his lemonade business for 4 million dollars
-                at the age of 10, Liao was bred for this opportunity in marketing."/>
+                role="Content Contributer"
+                desc=""/>
               <TeamMember 
-                name="Pham"
+                name="Richard"
                 src="../team/pham_dp.jpg"
-                role="VP, Director of Engineering"
-                desc="MMA fighter who ended his career early
-                due to a lack of competition in the sport, Pham has now found
-                a worthy challenge as the director of engineering."/>
+                role="Content Contributer"
+                desc=""/>
              <TeamMember 
-                name="Tam"
+                name="Wesley"
                 src="../team/tam_dp.jpg"
-                role="VP, Director of Design"
-                desc="Known for his exotic tastes, Tam also 
-                shadows as the company representative
-                at the Pokemon World Championships every year."/>
+                role="Content Contributer"
+                desc=""/>
               <TeamMember 
-                name="Chan"
+                name="Kelvin"
                 src="../team/chan_dp.jpg"
-                role="VP, Quality Assurance"
-                desc="Guiness World Record holder for worst arachnophobia,
-                Chan ensures products and services are delivered moist and well."/>
+                role="Content Contributer"
+                desc=""/>
               <TeamMember 
-                name="Grewal"
+                name="Harry"
                 src="../team/grewal_dp.jpg"
-                role="VP, Finance & Accounting"
-                desc="Co-founder of the Garden Guru, Grewal cuts
-                budgets and expenses as well as he did bushes and scrubs."/>
+                role="Content Contributer"
+                desc=""/>
               <TeamMember 
-                name="Ng"
+                name="Stephen"
                 src="../team/ng_dp.jpg"
-                role="VP, Business Development"
-                desc="After three ups and downs, Ng has blossomed
-                into a business mogul, thirtsy for the blood of competitors."/>
+                role="Content Contributer"
+                desc=""/>
               <TeamMember 
-                name="Siu"
+                name="Anthony"
                 src="../team/siu_dp.jpg"
-                role="VP, Growth & Advertising"
-                desc="Spent 3 years in the Jungle of Summoner's Rift,
-                Siu has emerged as a top talent in terms of company growth"/>
+                role="Content Contributer"
+                desc=""/>
               <TeamMember 
-                name="Lo"
+                name="Vincent"
                 src="../team/lo_dp.jpg"
-                role="Director of Human Resources"
-                desc="Never one to shy away from conflict, Lo has been
-                known to use unorthodox methods to solve problems in the worldplace."/>
+                role="Content Contributer"
+                desc=""/>
+              <TeamMember 
+                name="Michael"
+                src="../team/mike_dp.jpg"
+                role="Content Contributer"
+                desc=""/>
+              <TeamMember 
+                name="Lawrence"
+                src="../team/larry_dp.jpg"
+                role="Content Contributer"
+                desc=""/>
+              <TeamMember 
+                name="Prince"
+                src="../team/prince.jpg"
+                role="Content Contributer"
+                desc=""/>
+              <TeamMember 
+                name="Jasmeet"
+                src="../team/jas_dp.jpg"
+                role="Content Contributer"
+                desc=""/>
           </div>
         	<Footer />
         </div>

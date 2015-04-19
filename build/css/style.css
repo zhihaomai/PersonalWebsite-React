@@ -125,7 +125,25 @@
   background: white;
   border: 1px #E0E0E0 solid;
   border-radius: 4px;
-  height: 500px; }
+  height: 500px;
+  pointer-events: none; }
+.homePage .blob {
+  padding: 20px 0px;
+  background: #FAFAFA; }
+.homePage .blobContainer {
+  font-family: 'Abel', sans-serif;
+  font-weight: bold;
+  color: #757575;
+  padding: 20px; }
+.homePage .blobTitle {
+  display: inline-block;
+  font-size: 40px;
+  padding-left: 20px;
+  vertical-align: top;
+  line-height: 70px; }
+.homePage .blobDesc {
+  margin-top: 10px;
+  padding: 0px 40px; }
 
 * {
   margin: 0;
