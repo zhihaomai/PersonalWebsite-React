@@ -8,12 +8,20 @@
 		background: $lightGray;
 	}
 
-	.contentContainer {
+	.cover {
+		cursor: -webkit-grab;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		width: 100%;
+	}
+
+	.googleMap {
 		background: white;
 		border: 1px $darkGray solid;
 		border-radius: 4px;
 		height: 500px;
-		pointer-events: none;
+		position: relative;
 	}
 
 	.blob {

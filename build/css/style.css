@@ -134,12 +134,18 @@
 .homePage .container {
   padding: 10px;
   background: #FAFAFA; }
-.homePage .contentContainer {
+.homePage .cover {
+  cursor: -webkit-grab;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%; }
+.homePage .googleMap {
   background: white;
   border: 1px #E0E0E0 solid;
   border-radius: 4px;
   height: 500px;
-  pointer-events: none; }
+  position: relative; }
 .homePage .blob {
   padding: 20px 0px;
   background: #FAFAFA; }

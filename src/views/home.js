@@ -10,7 +10,29 @@ var Banner = require('./banner');
 var Footer = require('./footer');
 
 var Home = React.createClass({
+
+  componentDidMount: function() {
+    !function(d, id) {
+      var map = d.getElementById(id);
+      if (map) {
+        var cover = d.createElement('div');
+        cover.id = "cover";
+        cover.className = "cover";
+        cover.onclick = this._onMapClick;
+        map.appendChild(cover);
+      }
+    }.bind(this)(document,"googleMap");
+  },
   
+  _onMapClick: function () {
+    !function(d, id) {
+      var map = d.getElementById(id);
+      if (map) {
+        map.parentNode.removeChild(map);
+      }
+    }.bind(this)(document,"cover");
+  },
+
   _renderBanner: function() {
     return (
       <Banner 
@@ -26,7 +48,7 @@ var Home = React.createClass({
     return (
       <div className="pure-g">
         <div className="pure-u-1 pure-u-md-3-3 container">
-          <div className="contentContainer">
+          <div className="googleMap" id="googleMap">
             <iframe 
               src="https://www.google.com/maps/d/u/0/embed?mid=zfj9ky2F58qs.k7ZI_xWEzm8k" 
               width="100%" 
@@ -74,34 +96,34 @@ var Home = React.createClass({
   },
 
   // CURRENTLY UNUSED -----------------------------------------
-  _renderTweets: function() {
-    return (
-      <div className="pure-u-1 pure-u-md-1-3 container">
-        <a className="twitter-timeline" data-widget-id="589509406125006848"></a>
-      </div>
-    );
-  },
+  // _renderTweets: function() {
+  //   return (
+  //     <div className="pure-u-1 pure-u-md-1-3 container">
+  //       <a className="twitter-timeline" data-widget-id="589509406125006848"></a>
+  //     </div>
+  //   );
+  // },
 
-  componentWillMount: function() {
-    !function(d,s,id) {
-      var js, fjs=d.getElementsByTagName(s)[0];
-      var p=/^http:/.test(d.location)?'http':'https';
-      if(d.getElementById(id)) return;
-      js=d.createElement(s);
-      js.id=id;
-      js.src=p+"://platform.twitter.com/widgets.js";
-      fjs.parentNode.insertBefore(js,fjs);
-    }(document,"script","twitter-wjs");
-  },
+  // componentWillMount: function() {
+  //   !function(d,s,id) {
+  //     var js, fjs=d.getElementsByTagName(s)[0];
+  //     var p=/^http:/.test(d.location)?'http':'https';
+  //     if(d.getElementById(id)) return;
+  //     js=d.createElement(s);
+  //     js.id=id;
+  //     js.src=p+"://platform.twitter.com/widgets.js";
+  //     fjs.parentNode.insertBefore(js,fjs);
+  //   }(document,"script","twitter-wjs");
+  // },
 
-  componentWillUnmount: function() {
-    !function(d,s,id) {
-      var js = d.getElementById(id);
-      if (js.parentNode) {
-        js.parentNode.removeChild(js);
-      }
-    }(document,"script","twitter-wjs");
-  },
+  // componentWillUnmount: function() {
+  //   !function(d,s,id) {
+  //     var js = d.getElementById(id);
+  //     if (js.parentNode) {
+  //       js.parentNode.removeChild(js);
+  //     }
+  //   }(document,"script","twitter-wjs");
+  // },
   // -------------------------------------------------------------
 
   render: function() {
