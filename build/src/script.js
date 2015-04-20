@@ -31,7 +31,7 @@ $(function () {
 
 
 
-},{"./views/contact.js":199,"./views/home.js":202,"./views/team.js":203,"jquery":3,"react":197,"react-router":28}],2:[function(require,module,exports){
+},{"./views/contact.js":200,"./views/home.js":203,"./views/team.js":204,"jquery":3,"react":197,"react-router":28}],2:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -31961,7 +31961,35 @@ var TeamMember = React.createClass({ displayName: "TeamMember",
 module.exports = TeamMember;
 
 
-},{"./footer":200,"./header":201,"react":197}],199:[function(require,module,exports){
+},{"./footer":201,"./header":202,"react":197}],199:[function(require,module,exports){
+"use strict";
+
+var React = require("react");
+
+var Banner = React.createClass({ displayName: "Banner",
+
+  propTypes: {
+    imgSrc: React.PropTypes.string.isRequired,
+    icon: React.PropTypes.string.isRequired,
+    bannerTitle: React.PropTypes.string.isRequired,
+    bannerDesc: React.PropTypes.string.isRequired,
+    showBtn: React.PropTypes.bool.isRequired },
+
+  render: function () {
+    if (this.props.showBtn) {
+      var button = React.createElement("a", {
+        className: "pure-button bannerButton",
+        href: "http://www.facebook.com/zhifilms" }, "View Now");
+    }
+
+    return React.createElement("div", { className: "pure-g" }, React.createElement("div", { className: "pure-u-1 pure-u-md-1-1 bannerContainer" }, React.createElement("img", { className: "banner", src: this.props.imgSrc }), React.createElement("div", { className: "bannerText" }, React.createElement("div", { style: { display: "block" }, className: this.props.icon }), React.createElement("div", null, this.props.bannerTitle), React.createElement("div", { className: "bannerDesc" }, this.props.bannerDesc), button)));
+  } });
+
+module.exports = Banner;
+
+
+
+},{"react":197}],200:[function(require,module,exports){
 "use strict";
 
 /* Contact Page
@@ -31982,7 +32010,7 @@ var Contact = React.createClass({ displayName: "Contact",
 module.exports = Contact;
 
 
-},{"./footer":200,"./header":201,"react":197}],200:[function(require,module,exports){
+},{"./footer":201,"./header":202,"react":197}],201:[function(require,module,exports){
 "use strict";
 
 /* Footer
@@ -32000,7 +32028,7 @@ var Footer = React.createClass({ displayName: "Footer",
 module.exports = Footer;
 
 
-},{"react":197}],201:[function(require,module,exports){
+},{"react":197}],202:[function(require,module,exports){
 "use strict";
 
 /* Header
@@ -32052,7 +32080,7 @@ module.exports = Header;
 
 
 
-},{"react":197,"react-router":28}],202:[function(require,module,exports){
+},{"react":197,"react-router":28}],203:[function(require,module,exports){
 "use strict";
 
 /* Home Page
@@ -32063,14 +32091,18 @@ module.exports = Header;
 var React = require("react");
 
 var Header = require("./header");
+var Banner = require("./banner");
 var Footer = require("./footer");
 
 var Home = React.createClass({ displayName: "Home",
 
   _renderBanner: function () {
-    return React.createElement("div", { className: "pure-g" }, React.createElement("div", { className: "pure-u-1 pure-u-md-1-1 bannerContainer" }, React.createElement("img", { className: "banner", src: "../pictures/temp_banner.jpg" }), React.createElement("div", { className: "bannerText" }, React.createElement("div", { style: { display: "block" }, className: "fa fa-play-circle" }), React.createElement("div", null, "ZHI FILMS"), React.createElement("div", { className: "bannerDesc" }, "Internship Vlogs, GoPro Adventures, Life Moments"), React.createElement("a", {
-      className: "pure-button bannerButton",
-      href: "http://www.facebook.com/zhifilms" }, "View Now"))));
+    return React.createElement(Banner, {
+      imgSrc: "../pictures/temp_banner.jpg",
+      icon: "fa fa-play-circle",
+      bannerTitle: "ZHI FILMS",
+      bannerDesc: "Internship Vlogs, GoPro Adventures, Life Moments",
+      showBtn: true });
   },
 
   _renderMap: function () {
@@ -32121,7 +32153,7 @@ module.exports = Home;
 
 
 
-},{"./footer":200,"./header":201,"react":197}],203:[function(require,module,exports){
+},{"./banner":199,"./footer":201,"./header":202,"react":197}],204:[function(require,module,exports){
 "use strict";
 
 /* Team Page
@@ -32131,13 +32163,19 @@ module.exports = Home;
 var React = require("react");
 
 var Header = require("./header");
+var Banner = require("./banner");
 var TeamMember = require("./TeamMember");
 var Footer = require("./footer");
 
 var Team = React.createClass({ displayName: "Team",
 
   render: function () {
-    return React.createElement("div", { className: "teamPage" }, React.createElement(Header, null), React.createElement("div", { className: "content" }, React.createElement("div", { className: "pure-g teamGrid" }, React.createElement(TeamMember, {
+    return React.createElement("div", { className: "teamPage" }, React.createElement(Header, null), React.createElement("div", { className: "content" }, React.createElement(Banner, {
+      imgSrc: "../pictures/team_banner.jpg",
+      icon: "fa fa-users",
+      bannerTitle: "THE TEAM",
+      bannerDesc: "Team work makes the dream work. When there is teamwork" + " " + "and collaboration, wonderful things can be achieved.",
+      showBtn: false }), React.createElement("div", { className: "pure-g teamGrid" }, React.createElement(TeamMember, {
       name: "Zhihao",
       src: "../team/mai_dp.jpg",
       role: "Founder",
@@ -32207,4 +32245,4 @@ var Team = React.createClass({ displayName: "Team",
 module.exports = Team;
 
 
-},{"./TeamMember":198,"./footer":200,"./header":201,"react":197}]},{},[1]);
+},{"./TeamMember":198,"./banner":199,"./footer":201,"./header":202,"react":197}]},{},[1]);

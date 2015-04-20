@@ -6,29 +6,19 @@
 var React = require('react');
 
 var Header = require('./header');
+var Banner = require('./banner');
 var Footer = require('./footer');
 
 var Home = React.createClass({
   
   _renderBanner: function() {
     return (
-      <div className="pure-g">
-        <div className="pure-u-1 pure-u-md-1-1 bannerContainer">
-          <img className="banner" src="../pictures/temp_banner.jpg"/>
-          <div className="bannerText">
-            <div style={{display: 'block'}} className="fa fa-play-circle"></div>
-            <div>ZHI FILMS</div>
-            <div className="bannerDesc">
-              Internship Vlogs, GoPro Adventures, Life Moments
-            </div>
-            <a 
-              className="pure-button bannerButton" 
-              href="http://www.facebook.com/zhifilms">
-              View Now
-            </a>
-          </div>
-        </div>
-      </div>
+      <Banner 
+        imgSrc="../pictures/temp_banner.jpg"
+        icon="fa fa-play-circle"
+        bannerTitle="ZHI FILMS"
+        bannerDesc="Internship Vlogs, GoPro Adventures, Life Moments"
+        showBtn={true} />
     );
   },
 

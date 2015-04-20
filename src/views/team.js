@@ -5,6 +5,7 @@
 var React = require('react');
 
 var Header = require('./header');
+var Banner = require('./banner');
 var TeamMember = require('./TeamMember');
 var Footer = require('./footer');
 
@@ -15,6 +16,14 @@ var Team = React.createClass({
       <div className="teamPage">
         <Header />
         <div className="content">
+          <Banner 
+            imgSrc="../pictures/team_banner.jpg"
+            icon="fa fa-users"
+            bannerTitle="THE TEAM"
+            bannerDesc="Team work makes the dream work. When there is teamwork 
+            and collaboration, wonderful things can be achieved."
+            showBtn={false} />
+
           <div className="pure-g teamGrid">
               <TeamMember 
                 name="Zhihao"
