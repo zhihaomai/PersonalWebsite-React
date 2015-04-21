@@ -14,15 +14,10 @@
 	overflow: hidden;
 }
 
-.bannerText {
-	font-family: 'Abel', sans-serif;			
-	font-size: 6vmax;
+.bannerText {	
+	font-family: 'Abel', sans-serif;
 	font-weight: bold;
 	position: absolute;
-	padding-top: 3vmax;
-	padding-left: 4vmax;
-	padding-right: 4vmax;
-	padding-bottom: 4vmax;
 	top: 60px;
 	left: 0px;
 	width: 100%;
@@ -30,17 +25,78 @@
 
 .bannerDesc {
 	font-family: 'Abel', sans-serif;	
-	font-size: 2vmax;
 	font-weight: normal;
-	padding-top: 1vw;
-	padding-left: 25vw;
-	padding-right: 25vw;
 }
 
 .bannerButton {
 	border-radius: 4px;
 	background: $red;
 	color: white;
-	font-size: 2vmax;
-	margin-top: 1vw;
+}
+
+@media screen and (max-width: 192px) {
+	.bannerText {
+		font-size: 30px;
+		padding: 20px;
+	}
+	.bannerDesc {
+		font-size: 12px
+	}
+	.bannerButton {
+		font-size: 12px;
+	}
+}
+
+@media screen and (min-width: 193px) and (max-width: 230px) {
+	.bannerText {			
+		font-size: 40px;
+		padding: 20px;
+	}
+	.bannerDesc {
+		font-size: 16px
+	}
+	.bannerButton {
+		font-size: 16px;
+	}
+}
+
+@media screen and (min-width: 231px) and (max-width: 416px) {
+	.bannerText {			
+		font-size: 40px;
+		padding: 20px;
+	}
+	.bannerDesc {
+		font-size: 20px
+	}
+	.bannerButton {
+		font-size: 20px;
+	}
+}
+
+@media screen and (min-width: 417px) and (max-width: 799px) {
+	.bannerText {			
+		font-size: 44px;
+		padding: 20px;
+	}
+	.bannerDesc {
+		font-size: 24px
+	}
+	.bannerButton {
+		font-size: 20px;
+	}
+}
+
+@media screen and (min-width: 800px) {
+	.bannerText {			
+		font-size: 6vw;
+		padding: 20px;
+	}
+	.bannerDesc {
+		font-size: 2vw;
+		padding-left: 35vw;
+		padding-right: 35vw;
+	}
+	.bannerButton {
+		font-size: 2vw;
+	}
 }

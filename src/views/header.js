@@ -69,6 +69,9 @@ var Header = React.createClass({
                       <li className="pure-menu-item wordbutton">
                         <Link to="team">TEAM</Link>
                       </li>
+                      <li className="pure-menu-item wordbutton">
+                        <Link to="contact">CONTACT</Link>
+                      </li>
                     </ul>
                 </div>
             </div>
