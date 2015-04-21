@@ -2,6 +2,7 @@
 @import "constants/shadows";
 
 .header {
+
   .logo {
     margin-left: 10px;
     height: $headerHeight;
@@ -83,6 +84,13 @@
     -moz-transform: translateY(-6px);
     -ms-transform: translateY(-6px);
     transform: translateY(-6px);
+  }
+
+  .custom-toggle .bar:last-child {
+    -webkit-transform: translateY(6px);
+    -moz-transform: translateY(6px);
+    -ms-transform: translateY(6px);
+    transform: translateY(6px);  
   }
 
   .custom-toggle.x .bar {

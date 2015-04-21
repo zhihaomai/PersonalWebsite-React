@@ -56,7 +56,7 @@ var Header = React.createClass({
                   CREATE OUR OWN PATH
                 </div>
                 <a className="custom-toggle" onClick={this._toggleMenu} id="toggle">
-                  <s className="bar"></s><s className="bar"></s>
+                  <s className="bar"></s><s className="bar"></s><s className="bar"></s>
                 </a>
               </div>
             </div>

@@ -151,6 +151,11 @@
   -moz-transform: translateY(-6px);
   -ms-transform: translateY(-6px);
   transform: translateY(-6px); }
+.header .custom-toggle .bar:last-child {
+  -webkit-transform: translateY(6px);
+  -moz-transform: translateY(6px);
+  -ms-transform: translateY(6px);
+  transform: translateY(6px); }
 .header .custom-toggle.x .bar {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
