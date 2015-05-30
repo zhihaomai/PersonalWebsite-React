@@ -73,7 +73,6 @@
   .bannerButton {
     font-size: 2vw; } }
 
-
 .footer {
   background: white;
   color: #C62828;
@@ -197,14 +196,16 @@
   padding: 20px; }
 .homePage .blobTitle {
   display: inline-block;
-  font-size: 4vmax;
+  font-size: 40px;
   padding-left: 20px;
   vertical-align: top;
   line-height: 70px; }
 .homePage .blobDesc {
-  font-size: 2vmax;
+  font-size: 20px;
   margin-top: 10px;
   padding: 0px 40px; }
+.homePage .video {
+  min-height: 400px; }
 
 * {
   margin: 0;
@@ -231,6 +232,7 @@ a:hover {
 .content {
   margin-top: 60px;
   text-align: center; }
+
 
 .teamPage {
   color: #C62828; }

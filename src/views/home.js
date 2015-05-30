@@ -23,7 +23,7 @@ var Home = React.createClass({
       }
     }.bind(this)(document,"googleMap");
   },
-  
+
   _onMapClick: function () {
     !function(d, id) {
       var map = d.getElementById(id);
@@ -35,7 +35,7 @@ var Home = React.createClass({
 
   _renderBanner: function() {
     return (
-      <Banner 
+      <Banner
         imgSrc="../pictures/temp_banner.jpg"
         icon="fa fa-play-circle"
         bannerTitle="ZHI FILMS"
@@ -47,11 +47,11 @@ var Home = React.createClass({
   _renderMap: function() {
     return (
       <div className="pure-g">
-        <div className="pure-u-1 pure-u-md-3-3 container">
+        <div className="pure-u-1 pure-u-md-3-3">
           <div className="googleMap" id="googleMap">
-            <iframe 
-              src="https://www.google.com/maps/d/u/0/embed?mid=zfj9ky2F58qs.k7ZI_xWEzm8k" 
-              width="100%" 
+            <iframe
+              src="https://www.google.com/maps/d/u/0/embed?mid=zfj9ky2F58qs.k7ZI_xWEzm8k"
+              width="100%"
               height="100%"
               style={{border:0}}></iframe>
           </div>
@@ -64,14 +64,14 @@ var Home = React.createClass({
     return (
       <div className="blob pure-g">
         <div className="blobContainer pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-          <i className="fa fa-plane fa-4x"></i><div className="blobTitle">TRAVEL</div> 
+          <i className="fa fa-plane fa-4x"></i><div className="blobTitle">TRAVEL</div>
           <div className="blobDesc">
             We travel to feel alive, to become less ignorant about
             the world around us, to find a better self.
           </div>
         </div>
         <div className="blobContainer pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-          <i className="fa fa-camera-retro fa-4x"></i><div className="blobTitle">RECORD</div>          
+          <i className="fa fa-camera-retro fa-4x"></i><div className="blobTitle">RECORD</div>
           <div className="blobDesc">
             We record the memories we want to remember forever, to relive the
             greatest moments of our lives.
@@ -85,17 +85,26 @@ var Home = React.createClass({
           </div>
         </div>
         <div className="blobContainer pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-          <i className="fa fa-users fa-4x"></i><div className="blobTitle">UNITE</div>          
+          <i className="fa fa-users fa-4x"></i><div className="blobTitle">UNITE</div>
           <div className="blobDesc">
             We travel, record, and create to unite
             people with similar desires and experiences.
           </div>
-        </div>        
+        </div>
       </div>
     );
   },
 
-  // CURRENTLY UNUSED -----------------------------------------
+  // _renderVideo: function() {
+  //   return (
+  //     <div className="videoContainer">
+  //       <video className="video" width="100%" controls='false' autoPlay='true'>
+  //         <source src="../ZhiFilms.mp4" type="video/mp4" />
+  //       </video>
+  //     </div>
+  //   );
+  // },
+
   // _renderTweets: function() {
   //   return (
   //     <div className="pure-u-1 pure-u-md-1-3 container">

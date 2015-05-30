@@ -6,7 +6,7 @@ var $ = require('jquery');
 // Internal dependencies
 var Home = require('./views/home.js');
 var Team = require('./views/team.js');
-var Contact = require('./views/contact.js');
+var Store = require('./views/store.js');
 
 var DefaultRoute = Router.DefaultRoute;
 var Link = Router.Link;
@@ -24,8 +24,8 @@ var App = React.createClass({
 var routes = (
   <Route name="app" path="/" handler={App}>
     <DefaultRoute name="home" handler={Home} />
+    <Route name="store" path="/store" handler={Store} /> 
     <Route name="team" path="/team" handler={Team} />
-    <Route name="contact" path="/contact" handler={Contact} />
   </Route>
 );
 

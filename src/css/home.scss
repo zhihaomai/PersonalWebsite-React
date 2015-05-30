@@ -26,7 +26,7 @@
 
 	.blob {
 		padding: 20px 0px;
-		background: $lightGray;	
+		background: $lightGray;
 	}
 
 	.blobContainer {
@@ -38,15 +38,19 @@
 
 	.blobTitle {
 		display: inline-block;
-  		font-size: 4vmax;
+  		font-size: 40px;
   		padding-left: 20px;
   		vertical-align: top;
   		line-height: 70px;
 	}
 
 	.blobDesc {
-		font-size: 2vmax;
+		font-size: 20px;
 		margin-top: 10px;
 		padding: 0px 40px;
+	}
+
+	.video {
+		min-height: 400px;
 	}
 }

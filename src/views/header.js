@@ -65,12 +65,12 @@ var Header = React.createClass({
                     <ul className="pure-menu-list">
                       <li className="pure-menu-item wordbutton">
                         <Link to="home">HOME</Link>
+                      </li>
+                      <li className="pure-menu-item wordbutton">
+                        <Link to="store">STORE</Link>
                       </li>        
                       <li className="pure-menu-item wordbutton">
                         <Link to="team">TEAM</Link>
-                      </li>
-                      <li className="pure-menu-item wordbutton">
-                        <Link to="contact">CONTACT</Link>
                       </li>
                     </ul>
                 </div>
