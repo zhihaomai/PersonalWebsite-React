@@ -53,7 +53,7 @@ var Header = React.createClass({
                   <img className="logo" src="../pictures/logo.png"/>
                 </Link>
                 <div className="headerdesc">
-                  CREATE OUR OWN PATH
+                  CREATE OUR OWN PATHS
                 </div>
                 <a className="custom-toggle" onClick={this._toggleMenu} id="toggle">
                   <s className="bar"></s><s className="bar"></s><s className="bar"></s>
@@ -68,7 +68,7 @@ var Header = React.createClass({
                       </li>
                       <li className="pure-menu-item wordbutton">
                         <Link to="store">STORE</Link>
-                      </li>        
+                      </li>
                       <li className="pure-menu-item wordbutton">
                         <Link to="team">TEAM</Link>
                       </li>

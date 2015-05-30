@@ -32126,7 +32126,7 @@ var Header = React.createClass({ displayName: "Header",
   },
 
   render: function () {
-    return React.createElement("div", { className: "header" }, React.createElement("div", { className: "custom-wrapper pure-g", id: "menu" }, React.createElement("div", { className: "pure-u-1 pure-u-md-1-3" }, React.createElement("div", { className: "pure-menu" }, React.createElement(Link, { to: "home" }, React.createElement("img", { className: "logo", src: "../pictures/logo.png" })), React.createElement("div", { className: "headerdesc" }, "CREATE OUR OWN PATH"), React.createElement("a", { className: "custom-toggle", onClick: this._toggleMenu, id: "toggle" }, React.createElement("s", { className: "bar" }), React.createElement("s", { className: "bar" }), React.createElement("s", { className: "bar" })))), React.createElement("div", { className: "pure-u-1 pure-u-md-2-3" }, React.createElement("div", { className: "pure-menu pure-menu-horizontal custom-menu-3 custom-can-transform" }, React.createElement("ul", { className: "pure-menu-list" }, React.createElement("li", { className: "pure-menu-item wordbutton" }, React.createElement(Link, { to: "home" }, "HOME")), React.createElement("li", { className: "pure-menu-item wordbutton" }, React.createElement(Link, { to: "store" }, "STORE")), React.createElement("li", { className: "pure-menu-item wordbutton" }, React.createElement(Link, { to: "team" }, "TEAM")))))));
+    return React.createElement("div", { className: "header" }, React.createElement("div", { className: "custom-wrapper pure-g", id: "menu" }, React.createElement("div", { className: "pure-u-1 pure-u-md-1-3" }, React.createElement("div", { className: "pure-menu" }, React.createElement(Link, { to: "home" }, React.createElement("img", { className: "logo", src: "../pictures/logo.png" })), React.createElement("div", { className: "headerdesc" }, "CREATE OUR OWN PATHS"), React.createElement("a", { className: "custom-toggle", onClick: this._toggleMenu, id: "toggle" }, React.createElement("s", { className: "bar" }), React.createElement("s", { className: "bar" }), React.createElement("s", { className: "bar" })))), React.createElement("div", { className: "pure-u-1 pure-u-md-2-3" }, React.createElement("div", { className: "pure-menu pure-menu-horizontal custom-menu-3 custom-can-transform" }, React.createElement("ul", { className: "pure-menu-list" }, React.createElement("li", { className: "pure-menu-item wordbutton" }, React.createElement(Link, { to: "home" }, "HOME")), React.createElement("li", { className: "pure-menu-item wordbutton" }, React.createElement(Link, { to: "store" }, "STORE")), React.createElement("li", { className: "pure-menu-item wordbutton" }, React.createElement(Link, { to: "team" }, "TEAM")))))));
   } });
 
 module.exports = Header;
@@ -32149,27 +32149,27 @@ var Footer = require("./footer");
 
 var Home = React.createClass({ displayName: "Home",
 
-  componentDidMount: function () {
-    !(function (d, id) {
-      var map = d.getElementById(id);
-      if (map) {
-        var cover = d.createElement("div");
-        cover.id = "cover";
-        cover.className = "cover";
-        cover.onclick = this._onMapClick;
-        map.appendChild(cover);
-      }
-    }).bind(this)(document, "googleMap");
-  },
+  // componentDidMount: function() {
+  //   !function(d, id) {
+  //     var map = d.getElementById(id);
+  //     if (map) {
+  //       var cover = d.createElement('div');
+  //       cover.id = "cover";
+  //       cover.className = "cover";
+  //       cover.onclick = this._onMapClick;
+  //       map.appendChild(cover);
+  //     }
+  //   }.bind(this)(document,"googleMap");
+  // },
 
-  _onMapClick: function () {
-    !(function (d, id) {
-      var map = d.getElementById(id);
-      if (map) {
-        map.parentNode.removeChild(map);
-      }
-    }).bind(this)(document, "cover");
-  },
+  // _onMapClick: function () {
+  //   !function(d, id) {
+  //     var map = d.getElementById(id);
+  //     if (map) {
+  //       map.parentNode.removeChild(map);
+  //     }
+  //   }.bind(this)(document,"cover");
+  // },
 
   _renderBanner: function () {
     return React.createElement(Banner, {
@@ -32180,13 +32180,21 @@ var Home = React.createClass({ displayName: "Home",
       showBtn: true });
   },
 
-  _renderMap: function () {
-    return React.createElement("div", { className: "pure-g" }, React.createElement("div", { className: "pure-u-1 pure-u-md-3-3" }, React.createElement("div", { className: "googleMap", id: "googleMap" }, React.createElement("iframe", {
-      src: "https://www.google.com/maps/d/u/0/embed?mid=zfj9ky2F58qs.k7ZI_xWEzm8k",
-      width: "100%",
-      height: "100%",
-      style: { border: 0 } }))));
-  },
+  // _renderMap: function() {
+  //   return (
+  //     <div className="pure-g">
+  //       <div className="pure-u-1 pure-u-md-3-3">
+  //         <div className="googleMap" id="googleMap">
+  //           <iframe
+  //             src="https://www.google.com/maps/d/u/0/embed?mid=zfj9ky2F58qs.k7ZI_xWEzm8k"
+  //             width="100%"
+  //             height="100%"
+  //             style={{border:0}}></iframe>
+  //         </div>
+  //       </div>
+  //     </div>
+  //   );
+  // },
 
   _renderBlobs: function () {
     return React.createElement("div", { className: "blob pure-g" }, React.createElement("div", { className: "blobContainer pure-u-1 pure-u-md-1-2 pure-u-lg-1-4" }, React.createElement("i", { className: "fa fa-plane fa-4x" }), React.createElement("div", { className: "blobTitle" }, "TRAVEL"), React.createElement("div", { className: "blobDesc" }, "We travel to feel alive, to become less ignorant about" + " " + "the world around us, to find a better self.")), React.createElement("div", { className: "blobContainer pure-u-1 pure-u-md-1-2 pure-u-lg-1-4" }, React.createElement("i", { className: "fa fa-camera-retro fa-4x" }), React.createElement("div", { className: "blobTitle" }, "RECORD"), React.createElement("div", { className: "blobDesc" }, "We record the memories we want to remember forever, to relive the" + " " + "greatest moments of our lives.")), React.createElement("div", { className: "blobContainer pure-u-1 pure-u-md-1-2 pure-u-lg-1-4" }, React.createElement("i", { className: "fa fa-wrench fa-4x" }), React.createElement("div", { className: "blobTitle" }, "CREATE"), React.createElement("div", { className: "blobDesc" }, "We create to communicate and express ideas to others, to inspire" + " " + "activity and change.")), React.createElement("div", { className: "blobContainer pure-u-1 pure-u-md-1-2 pure-u-lg-1-4" }, React.createElement("i", { className: "fa fa-users fa-4x" }), React.createElement("div", { className: "blobTitle" }, "UNITE"), React.createElement("div", { className: "blobDesc" }, "We travel, record, and create to unite" + " " + "people with similar desires and experiences.")));
@@ -32233,7 +32241,7 @@ var Home = React.createClass({ displayName: "Home",
   // -------------------------------------------------------------
 
   render: function () {
-    return React.createElement("div", { className: "homePage" }, React.createElement(Header, null), React.createElement("div", { className: "content" }, this._renderBanner(), this._renderBlobs(), this._renderMap(), React.createElement(Footer, null)));
+    return React.createElement("div", { className: "homePage" }, React.createElement(Header, null), React.createElement("div", { className: "content" }, this._renderBanner(), this._renderBlobs(), React.createElement(Footer, null)));
   } });
 
 module.exports = Home;
@@ -32250,18 +32258,36 @@ module.exports = Home;
 var React = require("react");
 
 var Header = require("./header");
+var Banner = require("./banner");
 var Footer = require("./footer");
 
 var Store = React.createClass({ displayName: "Store",
 
+  _renderBanner: function () {
+    return React.createElement(Banner, {
+      imgSrc: "../pictures/store_banner.jpg",
+      icon: "fa fa-shopping-cart",
+      bannerTitle: "THE STORE",
+      bannerDesc: "Your official source for Zhi Films Merchandise, Apparel, and Collectibles. Be a part of the team today!",
+      showBtn: false });
+  },
+
+  _renderStoreItems: function () {
+    return React.createElement("div", { className: "pure-g items" }, this._renderStoreItem("../pictures/store/white_tshirt_design.png", "Unisex Premium T (White)", "$9.99 US + Tax"), this._renderStoreItem("../pictures/store/black_tshirt_design.png", "Unisex Premium T (Black)", "$9.99 US + Tax"), this._renderStoreItem("../pictures/store/gray_sweater_design.png", "Unisex Hoodie (Gray)", "$15.99 US + Tax"));
+  },
+
+  _renderStoreItem: function (imgSrc, desc, price) {
+    return React.createElement("div", { className: "pure-u-1-1 pure-u-md-1-3 item" }, React.createElement("div", { className: "content" }, React.createElement("img", { src: imgSrc, width: "100%" }), React.createElement("div", { className: "desc" }, desc), React.createElement("div", { className: "price" }, price), React.createElement("div", { className: "action" }, "Coming Soon")));
+  },
+
   render: function () {
-    return React.createElement("div", { className: "storePage" }, React.createElement(Header, null), React.createElement("div", { className: "content" }, React.createElement(Footer, null)));
+    return React.createElement("div", { className: "storePage" }, React.createElement(Header, null), React.createElement("div", { className: "content" }, this._renderBanner(), this._renderStoreItems(), React.createElement(Footer, null)));
   } });
 
 module.exports = Store;
 
 
-},{"./footer":200,"./header":201,"react":197}],204:[function(require,module,exports){
+},{"./banner":199,"./footer":200,"./header":201,"react":197}],204:[function(require,module,exports){
 "use strict";
 
 /* Team Page

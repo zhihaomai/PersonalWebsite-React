@@ -2,5 +2,35 @@
 @import "constants/shadows";
 
 .storePage {
+  .items {
+    background-color: $lightGray;
+    color: $grayText;
+    padding: 20px;
 
+  }
+
+  .item .content {
+    background-color: white;
+    border-radius: 5px;
+    border: 1px $darkGray solid;
+    font-family: 'Abel', sans-serif;
+    margin: 10px;
+    text-align: left;
+  }
+
+  .desc {
+    font-size: 25px;
+    padding: 10px 10px 0px 10px;
+  }
+
+  .price {
+    font-size: 15px;
+    padding: 0px 10px 10px 10px;
+  }
+
+  .action {
+    color: $red;
+    font-size: 15px;
+    padding: 10px;
+  }
 }

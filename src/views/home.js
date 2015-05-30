@@ -11,27 +11,27 @@ var Footer = require('./footer');
 
 var Home = React.createClass({
 
-  componentDidMount: function() {
-    !function(d, id) {
-      var map = d.getElementById(id);
-      if (map) {
-        var cover = d.createElement('div');
-        cover.id = "cover";
-        cover.className = "cover";
-        cover.onclick = this._onMapClick;
-        map.appendChild(cover);
-      }
-    }.bind(this)(document,"googleMap");
-  },
+  // componentDidMount: function() {
+  //   !function(d, id) {
+  //     var map = d.getElementById(id);
+  //     if (map) {
+  //       var cover = d.createElement('div');
+  //       cover.id = "cover";
+  //       cover.className = "cover";
+  //       cover.onclick = this._onMapClick;
+  //       map.appendChild(cover);
+  //     }
+  //   }.bind(this)(document,"googleMap");
+  // },
 
-  _onMapClick: function () {
-    !function(d, id) {
-      var map = d.getElementById(id);
-      if (map) {
-        map.parentNode.removeChild(map);
-      }
-    }.bind(this)(document,"cover");
-  },
+  // _onMapClick: function () {
+  //   !function(d, id) {
+  //     var map = d.getElementById(id);
+  //     if (map) {
+  //       map.parentNode.removeChild(map);
+  //     }
+  //   }.bind(this)(document,"cover");
+  // },
 
   _renderBanner: function() {
     return (
@@ -44,21 +44,21 @@ var Home = React.createClass({
     );
   },
 
-  _renderMap: function() {
-    return (
-      <div className="pure-g">
-        <div className="pure-u-1 pure-u-md-3-3">
-          <div className="googleMap" id="googleMap">
-            <iframe
-              src="https://www.google.com/maps/d/u/0/embed?mid=zfj9ky2F58qs.k7ZI_xWEzm8k"
-              width="100%"
-              height="100%"
-              style={{border:0}}></iframe>
-          </div>
-        </div>
-      </div>
-    );
-  },
+  // _renderMap: function() {
+  //   return (
+  //     <div className="pure-g">
+  //       <div className="pure-u-1 pure-u-md-3-3">
+  //         <div className="googleMap" id="googleMap">
+  //           <iframe
+  //             src="https://www.google.com/maps/d/u/0/embed?mid=zfj9ky2F58qs.k7ZI_xWEzm8k"
+  //             width="100%"
+  //             height="100%"
+  //             style={{border:0}}></iframe>
+  //         </div>
+  //       </div>
+  //     </div>
+  //   );
+  // },
 
   _renderBlobs: function() {
     return (
@@ -142,7 +142,6 @@ var Home = React.createClass({
         <div className="content">
           {this._renderBanner()}
           {this._renderBlobs()}
-          {this._renderMap()}
         	<Footer />
         </div>
       </div>

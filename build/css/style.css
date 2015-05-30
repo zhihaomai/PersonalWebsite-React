@@ -11,7 +11,6 @@
 
 .bannerText {
   font-family: 'Abel', sans-serif;
-  font-weight: bold;
   position: absolute;
   top: 60px;
   left: 0px;
@@ -74,6 +73,7 @@
     font-size: 2vw; } }
 
 .footer {
+  border-top: 1px solid #E0E0E0;
   background: white;
   color: #C62828;
   display: inline-block;
@@ -191,7 +191,6 @@
   background: #FAFAFA; }
 .homePage .blobContainer {
   font-family: 'Abel', sans-serif;
-  font-weight: bold;
   color: #757575;
   padding: 20px; }
 .homePage .blobTitle {
@@ -233,6 +232,27 @@ a:hover {
   margin-top: 60px;
   text-align: center; }
 
+.storePage .items {
+  background-color: #FAFAFA;
+  color: #757575;
+  padding: 20px; }
+.storePage .item .content {
+  background-color: white;
+  border-radius: 5px;
+  border: 1px #E0E0E0 solid;
+  font-family: 'Abel', sans-serif;
+  margin: 10px;
+  text-align: left; }
+.storePage .desc {
+  font-size: 25px;
+  padding: 10px 10px 0px 10px; }
+.storePage .price {
+  font-size: 15px;
+  padding: 0px 10px 10px 10px; }
+.storePage .action {
+  color: #C62828;
+  font-size: 15px;
+  padding: 10px; }
 
 .teamPage {
   color: #C62828; }

@@ -14,9 +14,8 @@
 	overflow: hidden;
 }
 
-.bannerText {	
+.bannerText {
 	font-family: 'Abel', sans-serif;
-	font-weight: bold;
 	position: absolute;
 	top: 60px;
 	left: 0px;
@@ -24,7 +23,7 @@
 }
 
 .bannerDesc {
-	font-family: 'Abel', sans-serif;	
+	font-family: 'Abel', sans-serif;
 	font-weight: normal;
 }
 
@@ -48,7 +47,7 @@
 }
 
 @media screen and (min-width: 193px) and (max-width: 230px) {
-	.bannerText {			
+	.bannerText {
 		font-size: 40px;
 		padding: 20px;
 	}
@@ -61,7 +60,7 @@
 }
 
 @media screen and (min-width: 231px) and (max-width: 416px) {
-	.bannerText {			
+	.bannerText {
 		font-size: 40px;
 		padding: 20px;
 	}
@@ -74,7 +73,7 @@
 }
 
 @media screen and (min-width: 417px) and (max-width: 799px) {
-	.bannerText {			
+	.bannerText {
 		font-size: 44px;
 		padding: 20px;
 	}
@@ -87,7 +86,7 @@
 }
 
 @media screen and (min-width: 800px) {
-	.bannerText {			
+	.bannerText {
 		font-size: 6vw;
 		padding: 20px;
 	}
