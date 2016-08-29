@@ -90,11 +90,13 @@
   margin-left: 10px;
   height: 60px;
   width: 60px; }
+
 .header .wordbutton {
   font-family: 'Abel', sans-serif;
   font-weight: bold;
   line-height: 40px;
   padding: 10px 20px; }
+
 .header .headerdesc {
   border-left: 1px solid #C62828;
   color: #C62828;
@@ -105,6 +107,7 @@
   margin: 10px 0px 10px 10px;
   padding-left: 10px;
   vertical-align: top; }
+
 .header .custom-wrapper {
   background-color: white;
   -webkit-font-smoothing: antialiased;
@@ -120,10 +123,13 @@
   left: 0;
   right: 0;
   z-index: 1; }
+
 .header .custom-wrapper.open {
   height: 250px; }
+
 .header .custom-menu-3 {
   text-align: right; }
+
 .header .custom-toggle {
   width: 40px;
   height: 60px;
@@ -132,6 +138,7 @@
   top: 0;
   right: 0;
   display: none; }
+
 .header .custom-toggle .bar {
   background-color: #C62828;
   display: block;
@@ -145,26 +152,31 @@
   -moz-transition: all 0.5s;
   -ms-transition: all 0.5s;
   transition: all 0.5s; }
+
 .header .custom-toggle .bar:first-child {
   -webkit-transform: translateY(-6px);
   -moz-transform: translateY(-6px);
   -ms-transform: translateY(-6px);
   transform: translateY(-6px); }
+
 .header .custom-toggle .bar:last-child {
   -webkit-transform: translateY(6px);
   -moz-transform: translateY(6px);
   -ms-transform: translateY(6px);
   transform: translateY(6px); }
+
 .header .custom-toggle.x .bar {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg); }
+
 .header .custom-toggle.x .bar:first-child {
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg); }
+
 @media (max-width: 47.999em) {
   .header .custom-menu-3 {
     text-align: left; }
@@ -174,35 +186,42 @@
 .homePage .container {
   padding: 10px;
   background: #FAFAFA; }
+
 .homePage .cover {
   cursor: -webkit-grab;
   position: absolute;
   top: 0;
   bottom: 0;
   width: 100%; }
+
 .homePage .googleMap {
   background: white;
   border: 1px #E0E0E0 solid;
   border-radius: 4px;
   height: 500px;
   position: relative; }
+
 .homePage .blob {
   padding: 20px 0px;
   background: #FAFAFA; }
+
 .homePage .blobContainer {
   font-family: 'Abel', sans-serif;
   color: #757575;
   padding: 20px; }
+
 .homePage .blobTitle {
   display: inline-block;
   font-size: 40px;
   padding-left: 20px;
   vertical-align: top;
   line-height: 70px; }
+
 .homePage .blobDesc {
   font-size: 20px;
   margin-top: 10px;
   padding: 0px 40px; }
+
 .homePage .video {
   min-height: 400px; }
 
@@ -236,6 +255,7 @@ a:hover {
   background-color: #FAFAFA;
   color: #757575;
   padding: 20px; }
+
 .storePage .item .content {
   background-color: white;
   border-radius: 5px;
@@ -243,12 +263,15 @@ a:hover {
   font-family: 'Abel', sans-serif;
   margin: 10px;
   text-align: left; }
+
 .storePage .desc {
   font-size: 25px;
   padding: 10px 10px 0px 10px; }
+
 .storePage .price {
   font-size: 15px;
   padding: 0px 10px 10px 10px; }
+
 .storePage .action {
   color: #C62828;
   font-size: 15px;
@@ -298,8 +321,8 @@ a:hover {
  */
 @font-face {
   font-family: 'FontAwesome';
-  src: url('../fonts/fontawesome-webfont.eot?v=4.1.0');
-  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.1.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff?v=4.1.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.1.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular') format('svg');
+  src: url("../fonts/fontawesome-webfont.eot?v=4.1.0");
+  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.1.0") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff?v=4.1.0") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.1.0") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -313,7 +336,7 @@ a:hover {
   -moz-osx-font-smoothing: grayscale; }
 
 .fa-lg {
-  font-size: 1.33333em;
+  font-size: 1.33333333em;
   line-height: .75em;
   vertical-align: -15%; }
 
@@ -330,12 +353,12 @@ a:hover {
   font-size: 5em; }
 
 .fa-fw {
-  width: 1.28571em;
+  width: 1.28571429em;
   text-align: center; }
 
 .fa-ul {
   padding-left: 0;
-  margin-left: 2.14286em;
+  margin-left: 2.14285714em;
   list-style-type: none; }
 
 .fa-ul > li {
@@ -343,13 +366,13 @@ a:hover {
 
 .fa-li {
   position: absolute;
-  left: -2.14286em;
-  width: 2.14286em;
-  top: .14286em;
+  left: -2.14285714em;
+  width: 2.14285714em;
+  top: .14285714em;
   text-align: center; }
 
 .fa-li.fa-lg {
-  left: -1.85714em; }
+  left: -1.85714286em; }
 
 .fa-border {
   padding: .2em .25em .15em;
@@ -377,21 +400,18 @@ a:hover {
 @-moz-keyframes spin {
   0% {
     -moz-transform: rotate(0deg); }
-
   100% {
     -moz-transform: rotate(359deg); } }
 
 @-webkit-keyframes spin {
   0% {
     -webkit-transform: rotate(0deg); }
-
   100% {
     -webkit-transform: rotate(359deg); } }
 
 @-o-keyframes spin {
   0% {
     -o-transform: rotate(0deg); }
-
   100% {
     -o-transform: rotate(359deg); } }
 
@@ -399,7 +419,6 @@ a:hover {
   0% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg); }
-
   100% {
     -webkit-transform: rotate(359deg);
     transform: rotate(359deg); } }

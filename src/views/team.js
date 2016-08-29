@@ -6,7 +6,7 @@ var React = require('react');
 
 var Header = require('./header');
 var Banner = require('./banner');
-var TeamMember = require('./TeamMember');
+var TeamMember = require('./teamMember');
 var Footer = require('./footer');
 
 var Team = React.createClass({
@@ -16,91 +16,91 @@ var Team = React.createClass({
       <div className="teamPage">
         <Header />
         <div className="content">
-          <Banner 
+          <Banner
             imgSrc="../pictures/team_banner.jpg"
             icon="fa fa-users"
             bannerTitle="THE TEAM"
-            bannerDesc="Team work makes the dream work. When there is teamwork 
+            bannerDesc="Team work makes the dream work. When there is teamwork
             and collaboration, wonderful things can be achieved."
             showBtn={false} />
 
           <div className="pure-g teamGrid">
-              <TeamMember 
+              <TeamMember
                 name="Zhihao"
                 src="../team/mai_dp.jpg"
                 role="Founder"
                 desc="Active role in all content creation."/>
-              <TeamMember 
+              <TeamMember
                 name="Gina"
                 src="../team/gina_dp.jpg"
                 role="Main Content Contributer"
                 desc="Vlogs and GoPro footage."/>
-              <TeamMember 
+              <TeamMember
                 name="Kevin"
                 src="../team/bedi_dp.jpg"
                 role="Content and Music Contributer"
                 desc="Vlogs footage and audio creation."/>
-              <TeamMember 
+              <TeamMember
                 name="Alan"
                 src="../team/chiu_dp.jpg"
                 role="Content Contributer"
                 desc="GoPro footage."/>
-              <TeamMember 
+              <TeamMember
                 name="Alvin"
                 src="../team/liao_dp.jpg"
                 role="Content Contributer"
                 desc="GoPro footage."/>
-              <TeamMember 
+              <TeamMember
                 name="Richard"
                 src="../team/pham_dp.jpg"
                 role="Content Contributer"
                 desc="GoPro footage."/>
-             <TeamMember 
+             <TeamMember
                 name="Wesley"
                 src="../team/tam_dp.jpg"
                 role="Content Contributer"
                 desc="GoPro footage."/>
-              <TeamMember 
+              <TeamMember
                 name="Kelvin"
                 src="../team/chan_dp.jpg"
                 role="Content Contributer"
                 desc="GoPro footage."/>
-              <TeamMember 
+              <TeamMember
                 name="Harry"
                 src="../team/grewal_dp.jpg"
                 role="Content Contributer"
                 desc="GoPro footage."/>
-              <TeamMember 
+              <TeamMember
                 name="Stephen"
                 src="../team/ng_dp.jpg"
                 role="Content Contributer"
                 desc="GoPro footage."/>
-              <TeamMember 
+              <TeamMember
                 name="Anthony"
                 src="../team/siu_dp.jpg"
                 role="Content Contributer"
                 desc="GoPro footage."/>
-              <TeamMember 
+              <TeamMember
                 name="Vincent"
                 src="../team/lo_dp.jpg"
                 role="Content Contributer"
                 desc="GoPro footage."/>
-              <TeamMember 
+              <TeamMember
                 name="Michael"
                 src="../team/mike_dp.jpg"
                 role="Content Contributer"
                 desc="GoPro footage."/>
-              <TeamMember 
+              <TeamMember
                 name="Lawrence"
                 src="../team/larry_dp.jpg"
                 role="Content Contributer"
                 desc="GoPro footage."/>
-              <TeamMember 
+              <TeamMember
                 name="Prince"
                 src="../team/prince.jpg"
                 role="Content Contributer"
                 desc="Vlogs footage."/>
-              <TeamMember 
+              <TeamMember
                 name="Jasmeet"
                 src="../team/jas_dp.jpg"
                 role="Content Contributer"
